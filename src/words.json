@@ -1,0 +1,1261 @@
+[ {
+  "english": "Thank you for today.",
+  "korean": "오늘 감사합니다.",
+  "en_hint": "Thank you for + 동사ing / 명사",
+  "kr_hint": "~에 대해 고마워요",
+  "section": 10
+},
+  {
+    "english": "Thank you for your help.",
+    "korean": "도와 줘서 고마워요.",
+    "en_hint": "Thank you for + 동사ing / 명사",
+    "kr_hint": "~에 대해 고마워요",
+    "section": 10
+  },
+  {
+    "english": "Thank you for your warm welcome.",
+    "korean": "당신의 환영에 고마워요.",
+    "en_hint": "Thank you for + 동사ing / 명사",
+    "kr_hint": "~에 대해 고마워요",
+    "section": 10
+  },
+  {
+    "english": "Thank you for being so kind.",
+    "korean": "친절히 대해줘서 고마워요.",
+    "en_hint": "Thank you for + 동사ing / 명사",
+    "kr_hint": "~에 대해 고마워요",
+    "section": 10
+  },
+  {
+    "english": "Thank you for listening.",
+    "korean": "들어줘서 고마워요.",
+    "en_hint": "Thank you for + 동사ing / 명사",
+    "kr_hint": "~에 대해 고마워요",
+    "section": 10
+  },
+  {
+    "english": "Thank you for coming.",
+    "korean": "와줘서 고마워요.",
+    "en_hint": "Thank you for + 동사ing / 명사",
+    "kr_hint": "~에 대해 고마워요",
+    "section": 10
+  },
+  {
+    "english": "Thank you for sharing the story.",
+    "korean": "이야기 들려줘서 고마워요.",
+    "en_hint": "Thank you for + 동사ing / 명사",
+    "kr_hint": "~에 대해 고마워요",
+    "section": 10
+  },
+  {
+    "english": "Thank you for dinner.",
+    "korean": "저녁식사 고마워요.",
+    "en_hint": "Thank you for + 동사ing / 명사",
+    "kr_hint": "~에 대해 고마워요",
+    "section": 10
+  },
+  {
+    "english": "Thank you for taking care of everything.",
+    "korean": "모든 것에 신경써줘서 고마워요.",
+    "en_hint": "Thank you for + 동사ing / 명사",
+    "kr_hint": "~에 대해 고마워요",
+    "section": 10
+  },
+  {
+    "english": "Thank you for waiting.",
+    "korean": "기다려줘서 고마워요.",
+    "en_hint": "Thank you for + 동사ing / 명사",
+    "kr_hint": "~에 대해 고마워요",
+    "section": 10
+  },
+  {
+    "english": "It seems weird.",
+    "korean": "이상한 것 같아요.",
+    "en_hint": "It seems + 형용사 / It seems that + 주어+동사",
+    "kr_hint": "~처럼 보여요 / ~인 것 같아요",
+    "section": 11
+  },
+  {
+    "english": "It seems expensive.",
+    "korean": "비싼 것 같아요.",
+    "en_hint": "It seems + 형용사 / It seems that + 주어+동사",
+    "kr_hint": "~처럼 보여요 / ~인 것 같아요",
+    "section": 11
+  },
+  {
+    "english": "It seems that he likes you.",
+    "korean": "그가 당신을 좋아하는 것 같아요.",
+    "en_hint": "It seems + 형용사 / It seems that + 주어+동사",
+    "kr_hint": "~처럼 보여요 / ~인 것 같아요",
+    "section": 11
+  },
+  {
+    "english": "It seems that she is drunk.",
+    "korean": "그녀는 취한 것 같아요.",
+    "en_hint": "It seems + 형용사 / It seems that + 주어+동사",
+    "kr_hint": "~처럼 보여요 / ~인 것 같아요",
+    "section": 11
+  },
+  {
+    "english": "It seems that this is a scam.",
+    "korean": "이거 사기인 것 같아요.",
+    "en_hint": "It seems + 형용사 / It seems that + 주어+동사",
+    "kr_hint": "~처럼 보여요 / ~인 것 같아요",
+    "section": 11
+  },
+  {
+    "english": "It seems that it’s raining outside.",
+    "korean": "밖에 비 오는 것 같아요.",
+    "en_hint": "It seems + 형용사 / It seems that + 주어+동사",
+    "kr_hint": "~처럼 보여요 / ~인 것 같아요",
+    "section": 11
+  },
+  {
+    "english": "It seems that she has a boyfriend.",
+    "korean": "그녀는 남자친구 있는 것 같아.",
+    "en_hint": "It seems + 형용사 / It seems that + 주어+동사",
+    "kr_hint": "~처럼 보여요 / ~인 것 같아요",
+    "section": 11
+  },
+  {
+    "english": "It seems that this movie is very fun.",
+    "korean": "이 영화 진짜 재밌는 것 같아.",
+    "en_hint": "It seems + 형용사 / It seems that + 주어+동사",
+    "kr_hint": "~처럼 보여요 / ~인 것 같아요",
+    "section": 11
+  },
+  {
+    "english": "It seems that she likes mine.",
+    "korean": "그녀가 내 것을 좋아하는 것 같아.",
+    "en_hint": "It seems + 형용사 / It seems that + 주어+동사",
+    "kr_hint": "~처럼 보여요 / ~인 것 같아요",
+    "section": 11
+  },
+  {
+    "english": "It seems that he doesn’t want to work here.",
+    "korean": "그는 여기서 일하고 싶지 않은 것 같아.",
+    "en_hint": "It seems + 형용사 / It seems that + 주어+동사",
+    "kr_hint": "~처럼 보여요 / ~인 것 같아요",
+    "section": 11
+  },
+  {
+    "english": "I’m going to skip this question.",
+    "korean": "이 질문은 넘어가겠습니다.",
+    "en_hint": "I am going to + 동사",
+    "kr_hint": "나는 ~할 거예요",
+    "section": 12
+  },
+  {
+    "english": "I’m going to drink some coffee.",
+    "korean": "커피 좀 마시려구요.",
+    "en_hint": "I am going to + 동사",
+    "kr_hint": "나는 ~할 거예요",
+    "section": 12
+  },
+  {
+    "english": "I’m going to take a taxi.",
+    "korean": "택시를 타려고요.",
+    "en_hint": "I am going to + 동사",
+    "kr_hint": "나는 ~할 거예요",
+    "section": 12
+  },
+  {
+    "english": "I’m going to visit my parents.",
+    "korean": "부모님을 방문하려(뵈러) 갈거에요.",
+    "en_hint": "I am going to + 동사",
+    "kr_hint": "나는 ~할 거예요",
+    "section": 12
+  },
+  {
+    "english": "I’m going to get her from the station.",
+    "korean": "역에서 그녀를 데려올거에요.",
+    "en_hint": "I am going to + 동사",
+    "kr_hint": "나는 ~할 거예요",
+    "section": 12
+  },
+  {
+    "english": "I’m going to show him pictures of my dog.",
+    "korean": "그에게 내 강아지 사진을 보여줄거에요.",
+    "en_hint": "I am going to + 동사",
+    "kr_hint": "나는 ~할 거예요",
+    "section": 12
+  },
+  {
+    "english": "I’m going to cook some ramen.",
+    "korean": "라면을 좀 끓이려구요.",
+    "en_hint": "I am going to + 동사",
+    "kr_hint": "나는 ~할 거예요",
+    "section": 12
+  },
+  {
+    "english": "I’m going to join Culcom to improve my English skill.",
+    "korean": "영어 실력을 향상시키기 위해 컬컴에 가입할 거예요.",
+    "en_hint": "I am going to + 동사",
+    "kr_hint": "나는 ~할 거예요",
+    "section": 12
+  },
+  {
+    "english": "I am going to change my phone to the new iPhone.",
+    "korean": "나 새로 나온 아이폰으로 폰 바꿀 거야.",
+    "en_hint": "I am going to + 동사",
+    "kr_hint": "나는 ~할 거예요",
+    "section": 12
+  },
+  {
+    "english": "I am going to quit my job.",
+    "korean": "나 일 그만둘거야.",
+    "en_hint": "I am going to + 동사",
+    "kr_hint": "나는 ~할 거예요",
+    "section": 12
+  },
+  {
+    "english": "I like doing squats.",
+    "korean": "스쿼트 동작 하는 것을 좋아해요.",
+    "en_hint": "I like + 동사 ing",
+    "kr_hint": "~하는 것을 좋아해요.",
+    "section": 13
+  },
+  {
+    "english": "I like talking to him.",
+    "korean": "그와(그에게) 이야기하는 것을 좋아해요.",
+    "en_hint": "I like + 동사 ing",
+    "kr_hint": "~하는 것을 좋아해요.",
+    "section": 13
+  },
+  {
+    "english": "I like going for a drive.",
+    "korean": "드라이브하러 가는 것을 좋아해요.",
+    "en_hint": "I like + 동사 ing",
+    "kr_hint": "~하는 것을 좋아해요.",
+    "section": 13
+  },
+  {
+    "english": "I like watching dramas.",
+    "korean": "드라마 보는 것을 좋아해요.",
+    "en_hint": "I like + 동사 ing",
+    "kr_hint": "~하는 것을 좋아해요.",
+    "section": 13
+  },
+  {
+    "english": "I like dancing with my friends.",
+    "korean": "내 친구들이랑 같이 춤추는 것을 좋아해요.",
+    "en_hint": "I like + 동사 ing",
+    "kr_hint": "~하는 것을 좋아해요.",
+    "section": 13
+  },
+  {
+    "english": "I like spacing out.",
+    "korean": "멍 때리는 것 좋아해요.",
+    "en_hint": "I like + 동사 ing",
+    "kr_hint": "~하는 것을 좋아해요.",
+    "section": 13
+  },
+  {
+    "english": "I like working hard.",
+    "korean": "열심히 일하는 것을 좋아해요.",
+    "en_hint": "I like + 동사 ing",
+    "kr_hint": "~하는 것을 좋아해요.",
+    "section": 13
+  },
+  {
+    "english": "I like playing tennis.",
+    "korean": "테니스 치는 것을 좋아해요.",
+    "en_hint": "I like + 동사 ing",
+    "kr_hint": "~하는 것을 좋아해요.",
+    "section": 13
+  },
+  {
+    "english": "I like cooking for my friends.",
+    "korean": "내 친구들을 위해 요리해 주는 것을 좋아해요.",
+    "en_hint": "I like + 동사 ing",
+    "kr_hint": "~하는 것을 좋아해요.",
+    "section": 13
+  },
+  {
+    "english": "I like taking selfies.",
+    "korean": "셀카 찍는 것을 좋아해요.",
+    "en_hint": "I like + 동사 ing",
+    "kr_hint": "~하는 것을 좋아해요.",
+    "section": 13
+  },
+  {
+    "english": "I am sorry about that.",
+    "korean": "그것에 대해 미안해요.",
+    "en_hint": "I'm sorry about + 명사",
+    "kr_hint": "~에 대해서 미안해요.",
+    "section": 14
+  },
+  {
+    "english": "I am sorry about last night.",
+    "korean": "어젯밤 일에 대해서 미안해요.",
+    "en_hint": "I'm sorry about + 명사",
+    "kr_hint": "~에 대해서 미안해요.",
+    "section": 14
+  },
+  {
+    "english": "I am sorry about your girlfriend.",
+    "korean": "당신의 여자친구 일에 대해서 유감이에요.",
+    "en_hint": "I'm sorry about + 명사",
+    "kr_hint": "~에 대해서 미안해요.",
+    "section": 14
+  },
+  {
+    "english": "I am sorry that he doesn't like you.",
+    "korean": "그가 당신을 좋아하지 않는다니 안됐네요.",
+    "en_hint": "I am sorry that + 문장(주어 + 동사)",
+    "kr_hint": "~가 ..라서 미안해요. 유감입니다.",
+    "section": 14
+  },
+  {
+    "english": "I am sorry that you got hurt.",
+    "korean": "당신이 다쳐서 안됐네요.",
+    "en_hint": "I am sorry that + 문장(주어 + 동사)",
+    "kr_hint": "~가 ..라서 미안해요. 유감입니다.",
+    "section": 14
+  },
+  {
+    "english": "I am sorry that you have no choice.",
+    "korean": "당신은 선택권이 없어 안타깝네요.",
+    "en_hint": "I am sorry that + 문장(주어 + 동사)",
+    "kr_hint": "~가 ..라서 미안해요. 유감입니다.",
+    "section": 14
+  },
+  {
+    "english": "I am sorry that you can't stay longer.",
+    "korean": "더 오래 못 계신다니 안타까워요.",
+    "en_hint": "I am sorry that + 문장(주어 + 동사)",
+    "kr_hint": "~가 ..라서 미안해요. 유감입니다.",
+    "section": 14
+  },
+  {
+    "english": "I am sorry that I can't help you.",
+    "korean": "도와주지 못해서 미안해요.",
+    "en_hint": "I am sorry that + 문장(주어 + 동사)",
+    "kr_hint": "~가 ..라서 미안해요. 유감입니다.",
+    "section": 14
+  },
+  {
+    "english": "I'm sorry that he was not my type.",
+    "korean": "안됐네요 그는 내 타입이 아니었어요.",
+    "en_hint": "I am sorry that + 문장(주어 + 동사)",
+    "kr_hint": "~가 ..라서 미안해요. 유감입니다.",
+    "section": 14
+  },
+  {
+    "english": "I'm sorry that I'm busy today.",
+    "korean": "내가 오늘 바빠서 유감이구나.",
+    "en_hint": "I am sorry that + 문장(주어 + 동사)",
+    "kr_hint": "~가 ..라서 미안해요. 유감입니다.",
+    "section": 14
+  },
+  {
+    "english": "I have a book to read.",
+    "korean": "나는 읽을 책이 있어.",
+    "en_hint": "I have 명사 to + 동사",
+    "kr_hint": "~할 ...이(가) 있어요.",
+    "section": 15
+  },
+  {
+    "english": "I have some food to eat.",
+    "korean": "나에게 먹을 음식이 있어.",
+    "en_hint": "I have 명사 to + 동사",
+    "kr_hint": "~할 ...이(가) 있어요.",
+    "section": 15
+  },
+  {
+    "english": "I have something to ask you.",
+    "korean": "당신에게 물어볼 것이 있어요.",
+    "en_hint": "I have 명사 to + 동사",
+    "kr_hint": "~할 ...이(가) 있어요.",
+    "section": 15
+  },
+  {
+    "english": "I have a car to drive tonight.",
+    "korean": "오늘 밤 운전할 차가 있어요.",
+    "en_hint": "I have 명사 to + 동사",
+    "kr_hint": "~할 ...이(가) 있어요.",
+    "section": 15
+  },
+  {
+    "english": "I have some information to share.",
+    "korean": "공유해 줄 정보가 있어요.",
+    "en_hint": "I have 명사 to + 동사",
+    "kr_hint": "~할 ...이(가) 있어요.",
+    "section": 15
+  },
+  {
+    "english": "I have work to finish this week.",
+    "korean": "이번주 안에 끝내야 할 일이 있어요.",
+    "en_hint": "I have 명사 to + 동사",
+    "kr_hint": "~할 ...이(가) 있어요.",
+    "section": 15
+  },
+  {
+    "english": "I have nothing to give you.",
+    "korean": "당신에게 줄 것이 아무것도 없어요.",
+    "en_hint": "I have 명사 to + 동사",
+    "kr_hint": "~할 ...이(가) 있어요.",
+    "section": 15
+  },
+  {
+    "english": "I have some money to buy you a present.",
+    "korean": "나는 당신에게 선물을 사줄 돈이 있어요.",
+    "en_hint": "I have 명사 to + 동사",
+    "kr_hint": "~할 ...이(가) 있어요.",
+    "section": 15
+  },
+  {
+    "english": "I have no words to express this feeling.",
+    "korean": "이 느낌을 표현할 말이 없어요.",
+    "en_hint": "I have 명사 to + 동사",
+    "kr_hint": "~할 ...이(가) 있어요.",
+    "section": 15
+  },
+  {
+    "english": "I have a secret to tell you.",
+    "korean": "너한테 말해줄 비밀이 있어.",
+    "en_hint": "I have 명사 to + 동사",
+    "kr_hint": "~할 ...이(가) 있어요.",
+    "section": 15
+  },
+  {
+    "english": "She said \"No, thanks\".",
+    "korean": "그녀는 '미안하지만 괜찮아.'라고 말했어요.",
+    "section": 16,
+    "en_hint": "She/He said + 문장",
+    "kr_hint": "...가 ~라고 말했어요."
+  },
+  {
+    "english": "She said you are cute.",
+    "korean": "그녀는 당신이 귀엽다고 말했어요.",
+    "section": 16,
+    "en_hint": "She/He said + 문장",
+    "kr_hint": "...가 ~라고 말했어요."
+  },
+  {
+    "english": "She said she had no time for me.",
+    "korean": "그녀는 저를 위한 시간이 없었다고 말했어요.",
+    "section": 16,
+    "en_hint": "She/He said + 문장",
+    "kr_hint": "...가 ~라고 말했어요."
+  },
+  {
+    "english": "She said she will come back soon.",
+    "korean": "그녀는 곧 돌아올거라고 했어요.",
+    "section": 16,
+    "en_hint": "She/He said + 문장",
+    "kr_hint": "...가 ~라고 말했어요."
+  },
+  {
+    "english": "She said she will go on a business trip next month.",
+    "korean": "그녀는 다음 달 출장간다고 했어요.",
+    "section": 16,
+    "en_hint": "She/He said + 문장",
+    "kr_hint": "...가 ~라고 말했어요."
+  },
+  {
+    "english": "She said she couldn't come.",
+    "korean": "그녀는 못 온다고 했어요.",
+    "section": 16,
+    "en_hint": "She/He said + 문장",
+    "kr_hint": "...가 ~라고 말했어요."
+  },
+  {
+    "english": "He said he would get a girlfriend.",
+    "korean": "그는 여자친구를 만들 거라고 했어요.",
+    "section": 16,
+    "en_hint": "She/He said + 문장",
+    "kr_hint": "...가 ~라고 말했어요."
+  },
+  {
+    "english": "He said he goes to the same gym.",
+    "korean": "그는 같은 헬스장으로 다닌다고 했어요.",
+    "section": 16,
+    "en_hint": "She/He said + 문장",
+    "kr_hint": "...가 ~라고 말했어요."
+  },
+  {
+    "english": "He said I'm his best friend.",
+    "korean": "그는 제가 그의 최고친구라고 했어요.",
+    "section": 16,
+    "en_hint": "She/He said + 문장",
+    "kr_hint": "...가 ~라고 말했어요."
+  },
+  {
+    "english": "He said he got lost.",
+    "korean": "그는 길을 잃어버렸다고 했어요.",
+    "section": 16,
+    "en_hint": "She/He said + 문장",
+    "kr_hint": "...가 ~라고 말했어요."
+  },
+  {
+    "english": "I have to go to work by 9am every day.",
+    "korean": "저는 매일 오전 9시까지 회사에 가야 해요.",
+    "section": 17,
+    "en_hint": "I have to + 동사",
+    "kr_hint": "나는 ~해야 해요."
+  },
+  {
+    "english": "I have to wake up early in the morning.",
+    "korean": "아침에 일찍 일어나야 해요.",
+    "section": 17,
+    "en_hint": "I have to + 동사",
+    "kr_hint": "나는 ~해야 해요."
+  },
+  {
+    "english": "I have to take a flight today.",
+    "korean": "오늘 비행기를 타야 해요.",
+    "section": 17,
+    "en_hint": "I have to + 동사",
+    "kr_hint": "나는 ~해야 해요."
+  },
+  {
+    "english": "I have to stay at home tonight.",
+    "korean": "오늘 밤에는 집에 있어야 해요.",
+    "section": 17,
+    "en_hint": "I have to + 동사",
+    "kr_hint": "나는 ~해야 해요."
+  },
+  {
+    "english": "I have to find the answer by myself.",
+    "korean": "나 혼자서 답을 알아내야 해.",
+    "section": 17,
+    "en_hint": "I have to + 동사",
+    "kr_hint": "나는 ~해야 해요."
+  },
+  {
+    "english": "I have to leave my home at 5:30am.",
+    "korean": "집에서 오전 5시30분에 나와야 해요.",
+    "section": 17,
+    "en_hint": "I have to + 동사",
+    "kr_hint": "나는 ~해야 해요."
+  },
+  {
+    "english": "I should fix my bad habits.",
+    "korean": "나는 나의 나쁜 습관을 고쳐야 해요.",
+    "section": 17,
+    "en_hint": "I should + 동사",
+    "kr_hint": "나는 ~해야 해요."
+  },
+  {
+    "english": "I should buy it at a convenience store.",
+    "korean": "그것을 편의점에서 사야 해요.",
+    "section": 17,
+    "en_hint": "I should + 동사",
+    "kr_hint": "나는 ~해야 해요."
+  },
+  {
+    "english": "I should eat more vegetables.",
+    "korean": "나는 야채를 더 먹어야 해.",
+    "section": 17,
+    "en_hint": "I should + 동사",
+    "kr_hint": "나는 ~해야 해요."
+  },
+  {
+    "english": "I should respect the elderly.",
+    "korean": "나는 노인들을 공경해야 해요.",
+    "section": 17,
+    "en_hint": "I should + 동사",
+    "kr_hint": "나는 ~해야 해요."
+  },
+  {
+    "english": "Sure, I can buy you dinner.",
+    "korean": "물론이죠, 저녁 사줄 수 있어요.",
+    "section": 18,
+    "en_hint": "Sure, I can + 동사",
+    "kr_hint": "물론이죠, ~할 수 있어요."
+  },
+  {
+    "english": "Sure, I can take you home.",
+    "korean": "물론이죠, 집으로 데려다줄 수 있어요.",
+    "section": 18,
+    "en_hint": "Sure, I can + 동사",
+    "kr_hint": "물론이죠, ~할 수 있어요."
+  },
+  {
+    "english": "Sure, I can go home by myself.",
+    "korean": "물론이죠, 혼자 집에 갈 수 있어요.",
+    "section": 18,
+    "en_hint": "Sure, I can + 동사",
+    "kr_hint": "물론이죠, ~할 수 있어요."
+  },
+  {
+    "english": "Sure, I can finish the food.",
+    "korean": "물론이죠, 다 먹을 수 있어요.",
+    "section": 18,
+    "en_hint": "Sure, I can + 동사",
+    "kr_hint": "물론이죠, ~할 수 있어요."
+  },
+  {
+    "english": "Sure, I can get up early!",
+    "korean": "물론이죠, 일찍 일어날 수 있죠!",
+    "section": 18,
+    "en_hint": "Sure, I can + 동사",
+    "kr_hint": "물론이죠, ~할 수 있어요."
+  },
+  {
+    "english": "Sure, I can run fast.",
+    "korean": "물론이죠, 저 빨리 달릴 수 있어요.",
+    "section": 18,
+    "en_hint": "Sure, I can + 동사",
+    "kr_hint": "물론이죠, ~할 수 있어요."
+  },
+  {
+    "english": "Sure, I can show you my bank balance.",
+    "korean": "물론이죠, 내 은행 잔고를 보여줄 수 있죠.",
+    "section": 18,
+    "en_hint": "Sure, I can + 동사",
+    "kr_hint": "물론이죠, ~할 수 있어요."
+  },
+  {
+    "english": "Sure, I can do push-ups.",
+    "korean": "물론이죠, 팔굽혀펴기 할 수 있어요.",
+    "section": 18,
+    "en_hint": "Sure, I can + 동사",
+    "kr_hint": "물론이죠, ~할 수 있어요."
+  },
+  {
+    "english": "Sure, I can handle it.",
+    "korean": "물론이죠, 내가 처리할 수 있어요.",
+    "section": 18,
+    "en_hint": "Sure, I can + 동사",
+    "kr_hint": "물론이죠, ~할 수 있어요."
+  },
+  {
+    "english": "Sure, I can trust you.",
+    "korean": "물론이죠, 당신을 믿을 수 있어요.",
+    "section": 18,
+    "en_hint": "Sure, I can + 동사",
+    "kr_hint": "물론이죠, ~할 수 있어요."
+  },
+  {
+    "english": "I feel like going on a trip.",
+    "korean": "나는 여행 가고 싶어요.",
+    "section": 19,
+    "en_hint": "I feel like + 동사ing",
+    "kr_hint": "~가 하고 싶어요."
+  },
+  {
+    "english": "I feel like lying in bed.",
+    "korean": "침대 위에 누워있고 싶어요.",
+    "section": 19,
+    "en_hint": "I feel like + 동사ing",
+    "kr_hint": "~가 하고 싶어요."
+  },
+  {
+    "english": "I feel like smoking a cigarette.",
+    "korean": "담배 한대 피우고 싶어요.",
+    "section": 19,
+    "en_hint": "I feel like + 동사ing",
+    "kr_hint": "~가 하고 싶어요."
+  },
+  {
+    "english": "I feel like drinking some coffee at a nice café.",
+    "korean": "멋진 카페에서 커피 마시고 싶어요.",
+    "section": 19,
+    "en_hint": "I feel like + 동사ing",
+    "kr_hint": "~가 하고 싶어요."
+  },
+  {
+    "english": "I feel like eating something spicy.",
+    "korean": "매운 무언가를 먹고 싶다.",
+    "section": 19,
+    "en_hint": "I feel like + 동사ing",
+    "kr_hint": "~가 하고 싶어요."
+  },
+  {
+    "english": "I feel like crying.",
+    "korean": "울고 싶은 기분이에요.",
+    "section": 19,
+    "en_hint": "I feel like + 동사ing",
+    "kr_hint": "~가 하고 싶어요."
+  },
+  {
+    "english": "I feel like traveling alone.",
+    "korean": "혼자 여행하고 싶은 기분이다.",
+    "section": 19,
+    "en_hint": "I feel like + 동사ing",
+    "kr_hint": "~가 하고 싶어요."
+  },
+  {
+    "english": "I feel like having a snack.",
+    "korean": "간식을 먹고 싶어요.",
+    "section": 19,
+    "en_hint": "I feel like + 동사ing",
+    "kr_hint": "~가 하고 싶어요."
+  },
+  {
+    "english": "I feel like running away.",
+    "korean": "도망가고 싶은 기분이다.",
+    "section": 19,
+    "en_hint": "I feel like + 동사ing",
+    "kr_hint": "~가 하고 싶어요."
+  },
+  {
+    "english": "I feel like taking a rest.",
+    "korean": "쉬고 싶은 기분이다.",
+    "section": 19,
+    "en_hint": "I feel like + 동사ing",
+    "kr_hint": "~가 하고 싶어요."
+  },
+  {
+    "english": "I go to Culcom to study English.",
+    "korean": "영어를 공부하기 위해 컬컴에 가요.",
+    "section": 20,
+    "en_hint": "문장 + to + 동사",
+    "kr_hint": "~하기 위해 ~해요."
+  },
+  {
+    "english": "I go to Gangnam to meet my friends.",
+    "korean": "친구를 만나기 위해 강남에 가요.",
+    "section": 20,
+    "en_hint": "문장 + to + 동사",
+    "kr_hint": "~하기 위해 ~해요."
+  },
+  {
+    "english": "I read books to broaden my knowledge.",
+    "korean": "지식을 넓히기 위해 책을 읽어요.",
+    "section": 20,
+    "en_hint": "문장 + to + 동사",
+    "kr_hint": "~하기 위해 ~해요."
+  },
+  {
+    "english": "I am on a diet to be healthy.",
+    "korean": "건강해지기 위해 다이어트를 해요.",
+    "section": 20,
+    "en_hint": "문장 + to + 동사",
+    "kr_hint": "~하기 위해 ~해요."
+  },
+  {
+    "english": "I use this credit card to get points.",
+    "korean": "포인트를 얻기 위해 이 카드를 써요.",
+    "section": 20,
+    "en_hint": "문장 + to + 동사",
+    "kr_hint": "~하기 위해 ~해요."
+  },
+  {
+    "english": "I hurried to catch the bus.",
+    "korean": "버스를 잡기 위해 서둘렀어요.",
+    "section": 20,
+    "en_hint": "문장 + to + 동사",
+    "kr_hint": "~하기 위해 ~해요."
+  },
+  {
+    "english": "I watch TV to relax at home.",
+    "korean": "집에서 쉬기 위해 TV를 봐요.",
+    "section": 20,
+    "en_hint": "문장 + to + 동사",
+    "kr_hint": "~하기 위해 ~해요."
+  },
+  {
+    "english": "I listen to music to focus on my work.",
+    "korean": "일에 집중하기 위해 음악을 들어요.",
+    "section": 20,
+    "en_hint": "문장 + to + 동사",
+    "kr_hint": "~하기 위해 ~해요."
+  },
+  {
+    "english": "I work out every day for at least 2 hours to lose weight.",
+    "korean": "살 빼기 위해 매일 적어도 두 시간 운동해요.",
+    "section": 20,
+    "en_hint": "문장 + to + 동사",
+    "kr_hint": "~하기 위해 ~해요."
+  },
+  {
+    "english": "I registered my fingerprint to unlock my phone.",
+    "korean": "폰 잠금을 풀기 위해 지문을 등록했어요.",
+    "section": 20,
+    "en_hint": "문장 + to + 동사",
+    "kr_hint": "~하기 위해 ~해요."
+  },
+  {
+    "english": "I bought a new phone, and my friend bought the same phone today.",
+    "korean": "새 폰을 샀고, 제 친구도 오늘 같은 걸 샀어요.",
+    "section": 21,
+    "en_hint": "and, or, so, but, because",
+    "kr_hint": "그리고, 그래서, 하지만, 왜냐하면"
+  },
+  {
+    "english": "Do you want to come to my house and have dinner?",
+    "korean": "우리집으로 와서 저녁 먹을래?",
+    "section": 21,
+    "en_hint": "and, or, so, but, because",
+    "kr_hint": "그리고, 그래서, 하지만, 왜냐하면"
+  },
+  {
+    "english": "Today is my birthday, so I got many gifts from friends.",
+    "korean": "오늘은 제 생일이에요. 그래서 전 친구들로부터 많은 선물을 받았어요.",
+    "section": 21,
+    "en_hint": "and, or, so, but, because",
+    "kr_hint": "그리고, 그래서, 하지만, 왜냐하면"
+  },
+  {
+    "english": "I can speak English but I can't speak French.",
+    "korean": "난 영어는 할 수 있는데 프랑스어는 못해.",
+    "section": 21,
+    "en_hint": "and, or, so, but, because",
+    "kr_hint": "그리고, 그래서, 하지만, 왜냐하면"
+  },
+  {
+    "english": "I ordered food but it didn't taste good.",
+    "korean": "음식을 주문했었는데, 맛없었어요.",
+    "section": 21,
+    "en_hint": "and, or, so, but, because",
+    "kr_hint": "그리고, 그래서, 하지만, 왜냐하면"
+  },
+  {
+    "english": "I go to Culcom every day because I want to improve my English skills quickly.",
+    "korean": "전 매일 컬컴에 가요. 왜냐하면 저는 빨리 영어실력을 향상시키고 싶거든요.",
+    "section": 21,
+    "en_hint": "and, or, so, but, because",
+    "kr_hint": "그리고, 그래서, 하지만, 왜냐하면"
+  },
+  {
+    "english": "I'm watching YouTube because I'm bored.",
+    "korean": "전 유튜브 보고 있어요, 왜냐하면 심심하거든요.",
+    "section": 21,
+    "en_hint": "and, or, so, but, because",
+    "kr_hint": "그리고, 그래서, 하지만, 왜냐하면"
+  },
+  {
+    "english": "Take care and I'll call you later.",
+    "korean": "몸조심하고 나중에 전화할게.",
+    "section": 21,
+    "en_hint": "and, or, so, but, because",
+    "kr_hint": "그리고, 그래서, 하지만, 왜냐하면"
+  },
+  {
+    "english": "I couldn't sleep last night but I'm ok.",
+    "korean": "어젯밤 잠을 못 잤지만, 괜찮아.",
+    "section": 21,
+    "en_hint": "and, or, so, but, because",
+    "kr_hint": "그리고, 그래서, 하지만, 왜냐하면"
+  },
+  {
+    "english": "I should go home and rest because I'm so tired.",
+    "korean": "나 너무 피곤해서 집에 가서 쉬어야 할 것 같아.",
+    "section": 21,
+    "en_hint": "and, or, so, but, because",
+    "kr_hint": "그리고, 그래서, 하지만, 왜냐하면"
+  },
+  {
+    "english": "I think you should leave her alone.",
+    "korean": "그녀를 혼자 두는게 좋겠어.",
+    "en_hint": "I think you should + 동사",
+    "kr_hint": "저는 당신이 ~해야 한다고 생각해요.",
+    "section": 22
+  },
+  {
+    "english": "I think you should sleep more.",
+    "korean": "너 잠 좀 더 자야겠어.",
+    "en_hint": "I think you should + 동사",
+    "kr_hint": "저는 당신이 ~해야 한다고 생각해요.",
+    "section": 22
+  },
+  {
+    "english": "I think you should take the subway, not a bus.",
+    "korean": "버스가 아니라 지하철을 타는게 좋을 것 같아.",
+    "en_hint": "I think you should + 동사",
+    "kr_hint": "저는 당신이 ~해야 한다고 생각해요.",
+    "section": 22
+  },
+  {
+    "english": "I think you should rest.",
+    "korean": "너 좀 쉬어야겠다.",
+    "en_hint": "I think you should + 동사",
+    "kr_hint": "저는 당신이 ~해야 한다고 생각해요.",
+    "section": 22
+  },
+  {
+    "english": "I think you should never give up.",
+    "korean": "너 절대로 포기하지 마.",
+    "en_hint": "I think you should + 동사",
+    "kr_hint": "저는 당신이 ~해야 한다고 생각해요.",
+    "section": 22
+  },
+  {
+    "english": "I think you should apologize to her.",
+    "korean": "너는 그녀에게 사과해야 해.",
+    "en_hint": "I think you should + 동사",
+    "kr_hint": "저는 당신이 ~해야 한다고 생각해요.",
+    "section": 22
+  },
+  {
+    "english": "I think you should wash your hands before a meal.",
+    "korean": "식사 전에 손을 씻어야 해.",
+    "en_hint": "I think you should + 동사",
+    "kr_hint": "저는 당신이 ~해야 한다고 생각해요.",
+    "section": 22
+  },
+  {
+    "english": "I think you should hurry up.",
+    "korean": "너 빨리 움직여야 할 것 같아.",
+    "en_hint": "I think you should + 동사",
+    "kr_hint": "저는 당신이 ~해야 한다고 생각해요.",
+    "section": 22
+  },
+  {
+    "english": "I think you should call in sick.",
+    "korean": "네가 병가 내야 할 것 같아.",
+    "en_hint": "I think you should + 동사",
+    "kr_hint": "저는 당신이 ~해야 한다고 생각해요.",
+    "section": 22
+  },
+  {
+    "english": "I think you should take a hint.",
+    "korean": "너 눈치 좀 채야 할 것 같아.",
+    "en_hint": "I think you should + 동사",
+    "kr_hint": "저는 당신이 ~해야 한다고 생각해요.",
+    "section": 22
+  },
+  {
+    "english": "Do you want to hang out with me?",
+    "korean": "나랑 놀고 싶니?",
+    "en_hint": "Do you want to + 동사",
+    "kr_hint": "당신은 ~이 하고 싶나요?",
+    "section": 23
+  },
+  {
+    "english": "Do you want to be rich?",
+    "korean": "부자가 되고 싶니?",
+    "en_hint": "Do you want to + 동사",
+    "kr_hint": "당신은 ~이 하고 싶나요?",
+    "section": 23
+  },
+  {
+    "english": "Do you want to go on a trip to Jeju Island?",
+    "korean": "제주도로 여행 가고 싶니?",
+    "en_hint": "Do you want to + 동사",
+    "kr_hint": "당신은 ~이 하고 싶나요?",
+    "section": 23
+  },
+  {
+    "english": "Do you want to bet?",
+    "korean": "내기할래?",
+    "en_hint": "Do you want to + 동사",
+    "kr_hint": "당신은 ~이 하고 싶나요?",
+    "section": 23
+  },
+  {
+    "english": "Do you want to cut classes?",
+    "korean": "수업 빼먹고 싶니?",
+    "en_hint": "Do you want to + 동사",
+    "kr_hint": "당신은 ~이 하고 싶나요?",
+    "section": 23
+  },
+  {
+    "english": "Do you want to get your hair dyed?",
+    "korean": "머리 염색하고 싶니?",
+    "en_hint": "Do you want to + 동사",
+    "kr_hint": "당신은 ~이 하고 싶나요?",
+    "section": 23
+  },
+  {
+    "english": "Do you want to share a cab to the airport?",
+    "korean": "공항까지 택시 같이 타고 가실래요?",
+    "en_hint": "Do you want to + 동사",
+    "kr_hint": "당신은 ~이 하고 싶나요?",
+    "section": 23
+  },
+  {
+    "english": "Do you want to stay at home?",
+    "korean": "집에서 있고 싶니?",
+    "en_hint": "Do you want to + 동사",
+    "kr_hint": "당신은 ~이 하고 싶나요?",
+    "section": 23
+  },
+  {
+    "english": "Do you want to meet your ex-boyfriend?",
+    "korean": "전 남자친구를 만나고 싶니?",
+    "en_hint": "Do you want to + 동사",
+    "kr_hint": "당신은 ~이 하고 싶나요?",
+    "section": 23
+  },
+  {
+    "english": "Do you want to take a look around?",
+    "korean": "한번 둘러보고 싶으세요?",
+    "en_hint": "Do you want to + 동사",
+    "kr_hint": "당신은 ~이 하고 싶나요?",
+    "section": 23
+  },
+  {
+    "english": "I am trying to understand her feelings.",
+    "korean": "나는 그녀의 기분을 이해하려고 애쓰고 있어.",
+    "en_hint": "I am trying to + 동사",
+    "kr_hint": "저는 ~하려고 노력중이에요.",
+    "section": 24
+  },
+  {
+    "english": "I am trying to be a good son.",
+    "korean": "저는 효자가 되려고 노력하고 있어요.",
+    "en_hint": "I am trying to + 동사",
+    "kr_hint": "저는 ~하려고 노력중이에요.",
+    "section": 24
+  },
+  {
+    "english": "I am trying to avoid butter and sugar.",
+    "korean": "나는 버터와 설탕을 피하려고 한다.",
+    "en_hint": "I am trying to + 동사",
+    "kr_hint": "저는 ~하려고 노력중이에요.",
+    "section": 24
+  },
+  {
+    "english": "I am trying to be patient.",
+    "korean": "인내심을 갖도록 노력하는 중이야.",
+    "en_hint": "I am trying to + 동사",
+    "kr_hint": "저는 ~하려고 노력중이에요.",
+    "section": 24
+  },
+  {
+    "english": "I am trying to stop smoking.",
+    "korean": "나는 담배를 그만 피려고 노력중이야.",
+    "en_hint": "I am trying to + 동사",
+    "kr_hint": "저는 ~하려고 노력중이에요.",
+    "section": 24
+  },
+  {
+    "english": "I am trying to cut down on coffee.",
+    "korean": "나는 커피를 줄이려고 노력하고 있어.",
+    "en_hint": "I am trying to + 동사",
+    "kr_hint": "저는 ~하려고 노력중이에요.",
+    "section": 24
+  },
+  {
+    "english": "I am trying to make up with her.",
+    "korean": "그녀와 화해하려고 하고 있어요.",
+    "en_hint": "I am trying to + 동사",
+    "kr_hint": "저는 ~하려고 노력중이에요.",
+    "section": 24
+  },
+  {
+    "english": "I am trying to stay calm.",
+    "korean": "침착하려 노력하고 있어.",
+    "en_hint": "I am trying to + 동사",
+    "kr_hint": "저는 ~하려고 노력중이에요.",
+    "section": 24
+  },
+  {
+    "english": "I am trying to concentrate on the class.",
+    "korean": "수업에 집중하려고 노력중이야.",
+    "en_hint": "I am trying to + 동사",
+    "kr_hint": "저는 ~하려고 노력중이에요.",
+    "section": 24
+  },
+  {
+    "english": "I am trying to get better.",
+    "korean": "나는 내가 더 나아지기 위해 노력중이야.",
+    "en_hint": "I am trying to + 동사",
+    "kr_hint": "저는 ~하려고 노력중이에요.",
+    "section": 24
+  },
+  {
+    "english": "Why don’t we hang out this weekend?",
+    "korean": "우리 이번 주말에 노는 게 어때?",
+    "en_hint": "Why don’t we + 동사?",
+    "kr_hint": "~ 하는 게 어때?",
+    "section": 25
+  },
+  {
+    "english": "Why don’t we jog in the morning?",
+    "korean": "우리 아침에 조깅하는 게 어때?",
+    "en_hint": "Why don’t we + 동사?",
+    "kr_hint": "~ 하는 게 어때?",
+    "section": 25
+  },
+  {
+    "english": "Why don’t we take a walk?",
+    "korean": "우리 좀 걷는 게 어때?",
+    "en_hint": "Why don’t we + 동사?",
+    "kr_hint": "~ 하는 게 어때?",
+    "section": 25
+  },
+  {
+    "english": "Why don’t we introduce ourselves?",
+    "korean": "우리 자기소개하는 게 어때?",
+    "en_hint": "Why don’t we + 동사?",
+    "kr_hint": "~ 하는 게 어때?",
+    "section": 25
+  },
+  {
+    "english": "Why don’t we go to the park?",
+    "korean": "우리 공원 가는 게 어때?",
+    "en_hint": "Why don’t we + 동사?",
+    "kr_hint": "~ 하는 게 어때?",
+    "section": 25
+  },
+  {
+    "english": "Why don’t we take a bus?",
+    "korean": "우리 버스 타는 건 어때?",
+    "en_hint": "Why don’t we + 동사?",
+    "kr_hint": "~ 하는 게 어때?",
+    "section": 25
+  },
+  {
+    "english": "Why don’t we try again?",
+    "korean": "우리 다시 해보는 건 어때?",
+    "en_hint": "Why don’t we + 동사?",
+    "kr_hint": "~ 하는 게 어때?",
+    "section": 25
+  },
+  {
+    "english": "Why don’t we watch a movie together?",
+    "korean": "우리 같이 영화 보는 게 어때?",
+    "en_hint": "Why don’t we + 동사?",
+    "kr_hint": "~ 하는 게 어때?",
+    "section": 25
+  },
+  {
+    "english": "Why don’t we play a board game?",
+    "korean": "우리 보드게임 하는 게 어때?",
+    "en_hint": "Why don’t we + 동사?",
+    "kr_hint": "~ 하는 게 어때?",
+    "section": 25
+  },
+  {
+    "english": "Why don’t we get her a cake?",
+    "korean": "우리 그녀에게 케이크를 사주는 건 어때?",
+    "en_hint": "Why don’t we + 동사?",
+    "kr_hint": "~ 하는 게 어때?",
+    "section": 25
+  },
+  {
+    "english": "What can I do about that?",
+    "korean": "그거에 대해 내가 뭘 할 수 있어?",
+    "en_hint": "What/Where/How can I + 동사",
+    "kr_hint": "무엇을 / 어디에서 / 어떻게 ~할 수 있나요?",
+    "section": 26
+  },
+  {
+    "english": "What can I get you?",
+    "korean": "뭘 드릴까요?",
+    "en_hint": "What/Where/How can I + 동사",
+    "kr_hint": "무엇을 / 어디에서 / 어떻게 ~할 수 있나요?",
+    "section": 26
+  },
+  {
+    "english": "What can I say?",
+    "korean": "내가 무슨 말을 할 수 있겠어?",
+    "en_hint": "What/Where/How can I + 동사",
+    "kr_hint": "무엇을 / 어디에서 / 어떻게 ~할 수 있나요?",
+    "section": 26
+  },
+  {
+    "english": "Where can I get a taxi?",
+    "korean": "택시는 어디서 잡을 수 있나요?",
+    "en_hint": "What/Where/How can I + 동사",
+    "kr_hint": "무엇을 / 어디에서 / 어떻게 ~할 수 있나요?",
+    "section": 26
+  },
+  {
+    "english": "Where can I park my car?",
+    "korean": "제 차를 어디에 주차할 수 있나요?",
+    "en_hint": "What/Where/How can I + 동사",
+    "kr_hint": "무엇을 / 어디에서 / 어떻게 ~할 수 있나요?",
+    "section": 26
+  },
+  {
+    "english": "Where can I charge my phone?",
+    "korean": "어디서 제 폰을 충전할 수 있나요?",
+    "en_hint": "What/Where/How can I + 동사",
+    "kr_hint": "무엇을 / 어디에서 / 어떻게 ~할 수 있나요?",
+    "section": 26
+  },
+  {
+    "english": "How can I get to the subway station?",
+    "korean": "지하철역에 어떻게 가나요?",
+    "en_hint": "What/Where/How can I + 동사",
+    "kr_hint": "무엇을 / 어디에서 / 어떻게 ~할 수 있나요?",
+    "section": 26
+  },
+  {
+    "english": "How can I say that in English?",
+    "korean": "영어로는 그걸 어떻게 말하나요?",
+    "en_hint": "What/Where/How can I + 동사",
+    "kr_hint": "무엇을 / 어디에서 / 어떻게 ~할 수 있나요?",
+    "section": 26
+  },
+  {
+    "english": "How can I order?",
+    "korean": "어떻게 주문하나요?",
+    "en_hint": "What/Where/How can I + 동사",
+    "kr_hint": "무엇을 / 어디에서 / 어떻게 ~할 수 있나요?",
+    "section": 26
+  },
+  {
+    "english": "How can I help you?",
+    "korean": "어떻게 도와드릴까요?",
+    "en_hint": "What/Where/How can I + 동사",
+    "kr_hint": "무엇을 / 어디에서 / 어떻게 ~할 수 있나요?",
+    "section": 26
+  },
+  {
+    "english": "What kind of person is he?",
+    "korean": "그 남자는 어떤 사람인가요?",
+    "en_hint": "What kind of + 명사 + do you ~?",
+    "kr_hint": "당신은 어떤 ~을 …하나요?",
+    "section": 27
+  },
+  {
+    "english": "What kind of food do you like?",
+    "korean": "어떤 음식을 좋아하나요?",
+    "en_hint": "What kind of + 명사 + do you ~?",
+    "kr_hint": "당신은 어떤 ~을 …하나요?",
+    "section": 27
+  },
+  {
+    "english": "What kind of exercise do you do?",
+    "korean": "어떤 운동을 하나요?",
+    "en_hint": "What kind of + 명사 + do you ~?",
+    "kr_hint": "당신은 어떤 ~을 …하나요?",
+    "section": 27
+  },
+  {
+    "english": "What kind of app does she use?",
+    "korean": "그녀는 어떤 앱을 쓰나요?",
+    "en_hint": "What kind of + 명사 + do you ~?",
+    "kr_hint": "당신은 어떤 ~을 …하나요?",
+    "section": 27
+  },
+  {
+    "english": "What kind of phone case do you have?",
+    "korean": "어떤 폰 케이스를 가지고 있나요?",
+    "en_hint": "What kind of + 명사 + do you ~?",
+    "kr_hint": "당신은 어떤 ~을 …하나요?",
+    "section": 27
+  },
+  {
+    "english": "What kind of movie do you watch?",
+    "korean": "어떤 영화를 보시나요?",
+    "en_hint": "What kind of + 명사 + do you ~?",
+    "kr_hint": "당신은 어떤 ~을 …하나요?",
+    "section": 27
+  },
+  {
+    "english": "What kind of job do you want?",
+    "korean": "어떤 직업을 원하시나요?",
+    "en_hint": "What kind of + 명사 + do you ~?",
+    "kr_hint": "당신은 어떤 ~을 …하나요?",
+    "section": 27
+  },
+  {
+    "english": "What kind of bag do you want?",
+    "korean": "어떤 가방을 원하시나요?",
+    "en_hint": "What kind of + 명사 + do you ~?",
+    "kr_hint": "당신은 어떤 ~을 …하나요?",
+    "section": 27
+  },
+  {
+    "english": "What kind of game do you play?",
+    "korean": "어떤 게임을 하나요?",
+    "en_hint": "What kind of + 명사 + do you ~?",
+    "kr_hint": "당신은 어떤 ~을 …하나요?",
+    "section": 27
+  },
+  {
+    "english": "What kind of sports do you like most?",
+    "korean": "어떤 스포츠를 가장 좋아하나요?",
+    "en_hint": "What kind of + 명사 + do you ~?",
+    "kr_hint": "당신은 어떤 ~을 …하나요?",
+    "section": 27
+  }
+]
