@@ -55,6 +55,136 @@
   white-space: nowrap;
 }
 
+/* 수동 설치 안내 모달 스타일 */
+.install-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  padding: 20px;
+}
+
+.install-modal {
+  background: white;
+  border-radius: 12px;
+  max-width: 480px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.install-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.install-modal-header h3 {
+  margin: 0;
+  color: #333;
+  font-size: 18px;
+}
+
+.install-modal-close {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #666;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.install-modal-close:hover {
+  background: #f0f0f0;
+  color: #333;
+}
+
+.install-modal-content {
+  padding: 20px;
+}
+
+.install-instructions p {
+  margin: 0 0 15px 0;
+  color: #333;
+  font-size: 16px;
+}
+
+.install-steps {
+  margin: 15px 0;
+}
+
+.install-step {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 12px;
+  gap: 12px;
+}
+
+.step-number {
+  background: #4CAF50;
+  color: white;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.step-text {
+  color: #333;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.share-icon,
+.add-icon,
+.menu-icon {
+  font-size: 16px;
+  margin: 0 2px;
+}
+
+.install-benefits {
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+}
+
+.install-benefits p {
+  margin: 0 0 10px 0;
+  color: #333;
+  font-size: 14px;
+}
+
+.install-benefits ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.install-benefits li {
+  color: #666;
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
 @media (max-width: 768px) {
   .pwa-install-button,
   .pwa-install-status.installed {
@@ -68,5 +198,33 @@
   
   .install-icon {
     font-size: 16px;
+  }
+
+  .install-modal-overlay {
+    padding: 10px;
+  }
+
+  .install-modal {
+    margin: 10px;
+  }
+
+  .install-modal-header {
+    padding: 15px;
+  }
+
+  .install-modal-header h3 {
+    font-size: 16px;
+  }
+
+  .install-modal-content {
+    padding: 15px;
+  }
+
+  .install-instructions p {
+    font-size: 14px;
+  }
+
+  .step-text {
+    font-size: 13px;
   }
 }
