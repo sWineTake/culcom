@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "English Study",
+  "name": "English Study - 영어 학습 앱",
   "icons": [
     {
       "src": "favicon.ico",
@@ -21,5 +21,8 @@
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "background_color": "#ffffff",
+  "description": "음성 인식을 활용한 영어 학습 앱",
+  "categories": ["education", "productivity"],
+  "lang": "ko-KR"
 }

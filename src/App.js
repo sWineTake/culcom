@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import './App.css';
 import wordsData from './words.json';
+import PWAInstallButton from './components/PWAInstallButton';
 
 function App() {
   const [currentWord, setCurrentWord] = useState(null);
@@ -646,6 +647,7 @@ function App() {
 
   return (
     <div className="App">
+      <PWAInstallButton />
       <header className="App-header">
         {showSectionSelect ? (
           <div className="section-select-screen">
