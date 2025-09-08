@@ -309,6 +309,11 @@ function App() {
     "30": ["써티", "thirty"]
   };
 
+  // 한글 발음과 영어 알파벳 매핑
+  const koreanToEnglishMap = {
+    "a": ["어", "에이", "아"]
+  };
+
   // 숫자, 금액, 시간 등을 자동으로 보여줄 단어들 (정규식 패턴)
   const autoRevealPatterns = [
     /^\d+$/,           // 순수 숫자 (9, 30, 100 등)
@@ -364,15 +369,26 @@ function App() {
 
   // 사용자가 말한 단어들 중에서 정답과 일치하는 것들만 찾아서 반환
   const findMatchedWords = useCallback((speechText, correctAnswer) => {
-    if (!speechText || !correctAnswer) return [];
+    if (!correctAnswer) return [];
     
-    const speechWords = speechText.toLowerCase().split(/\s+/).filter(word => word.length > 0);
+    const speechWords = speechText ? speechText.toLowerCase().split(/\s+/).filter(word => word.length > 0) : [];
     const originalWords = correctAnswer.split(/\s+/);
     const matchedWords = [];
     
     // 각 원본 단어에 대해 매칭 확인
     originalWords.forEach((originalWord, originalIndex) => {
       const cleanOriginalWord = originalWord.replace(/[.,!?;"']/g, '').toLowerCase();
+      
+      // 자동으로 보여지는 단어들은 자동으로 매칭된 것으로 처리
+      if (shouldAutoReveal(originalWord)) {
+        matchedWords.push({ 
+          word: cleanOriginalWord, 
+          original: originalWord,
+          originalWord: cleanOriginalWord,
+          originalIndex: originalIndex
+        });
+        return;
+      }
       
       // 사용자가 말한 각 단어와 비교
       speechWords.forEach(speechWord => {
@@ -432,6 +448,26 @@ function App() {
             pronunciation.replace(/\s+/g, '').includes(cleanSpeech) ||
             cleanSpeech === pronunciation ||
             calculateSimilarity(cleanSpeech, pronunciation.replace(/\s+/g, '')) >= 0.7
+          )) {
+            if (!matchedWords.some(m => m.originalIndex === originalIndex)) {
+              matchedWords.push({ 
+                word: cleanOriginalWord, 
+                original: originalWord,
+                originalWord: cleanOriginalWord,
+                originalIndex: originalIndex
+              });
+            }
+            return;
+          }
+        }
+
+        // 3.7. 한글-영어 알파벳 매핑 확인
+        if (koreanToEnglishMap[cleanOriginalWord]) {
+          const koreanPronunciations = koreanToEnglishMap[cleanOriginalWord];
+          // 사용자가 말한 내용이 한국어 발음 중 하나와 일치하는지 확인
+          if (koreanPronunciations.some(pronunciation => 
+            cleanSpeech === pronunciation ||
+            calculateSimilarity(cleanSpeech, pronunciation) >= 0.8
           )) {
             if (!matchedWords.some(m => m.originalIndex === originalIndex)) {
               matchedWords.push({ 
@@ -621,7 +657,7 @@ function App() {
 
   // 모든 단어를 맞췄을 때 자동으로 다음 문제로 넘어가기
   useEffect(() => {
-    if (!currentWord || !speechInput || showAnswer) return;
+    if (!currentWord || showAnswer) return;
     
     const correctAnswer = showKorean ? currentWord.english : currentWord.korean;
     const words = correctAnswer.split(' ');
@@ -640,7 +676,7 @@ function App() {
         getNextWord();
       }, 1500);
     }
-  }, [currentWord, speechInput, showAnswer, showKorean, findMatchedWords, getNextWord]);
+  }, [currentWord, speechInput, showAnswer, showKorean, findMatchedWords, getNextWord, usedPreview]);
 
 
   if (!currentWord && !isCompleted && !showSectionSelect) return <div>Loading...</div>;
