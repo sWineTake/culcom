@@ -522,9 +522,43 @@ function App() {
       // 대문자를 소문자로 변환하여 자연스러운 발음
       const cleanWord = word.replace(/[.,!?;"']/g, '').toLowerCase();
       const utterance = new SpeechSynthesisUtterance(cleanWord);
+      
+      // 미국식 발음을 위한 설정
       utterance.lang = 'en-US';
-      utterance.rate = 0.8;
-      utterance.pitch = 1;
+      utterance.rate = 0.7; // 조금 더 천천히
+      utterance.pitch = 1.0;
+      utterance.volume = 1.0;
+      
+      // 사용 가능한 음성 중에서 미국식 영어 음성을 찾아서 설정
+      const voices = speechSynthesis.getVoices();
+      const preferredVoices = [
+        'Microsoft David - English (United States)',
+        'Microsoft Mark - English (United States)', 
+        'Microsoft Zira - English (United States)',
+        'Google US English',
+        'Alex',
+        'Samantha'
+      ];
+      
+      // 선호하는 음성 순서대로 찾기
+      let selectedVoice = null;
+      for (const preferredName of preferredVoices) {
+        selectedVoice = voices.find(voice => 
+          voice.name.includes(preferredName) || 
+          (voice.lang === 'en-US' && voice.name.toLowerCase().includes(preferredName.toLowerCase()))
+        );
+        if (selectedVoice) break;
+      }
+      
+      // 선호하는 음성이 없으면 en-US 중에서 첫 번째 선택
+      if (!selectedVoice) {
+        selectedVoice = voices.find(voice => voice.lang === 'en-US');
+      }
+      
+      if (selectedVoice) {
+        utterance.voice = selectedVoice;
+      }
+      
       speechSynthesis.speak(utterance);
     }
   }, []);
@@ -635,6 +669,21 @@ function App() {
       </div>
     );
   };
+
+  // 음성 합성 목록을 미리 로드
+  useEffect(() => {
+    if ('speechSynthesis' in window) {
+      // 음성 목록이 로드될 때까지 기다림
+      const loadVoices = () => {
+        speechSynthesis.getVoices();
+      };
+      
+      if (speechSynthesis.onvoiceschanged !== undefined) {
+        speechSynthesis.onvoiceschanged = loadVoices;
+      }
+      loadVoices();
+    }
+  }, []);
 
   useEffect(() => {
     if (currentWord && !showSectionSelect) {
