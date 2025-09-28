@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable no-unused-vars */
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import './App.css';
 import wordsData from './words.json';
@@ -7,7 +9,6 @@ function App() {
   const [currentWord, setCurrentWord] = useState(null);
   const [showKorean, setShowKorean] = useState(true);
   const [showAnswer, setShowAnswer] = useState(false);
-  const [showHint, setShowHint] = useState(false);
   const [usedWords, setUsedWords] = useState([]);
   const [isCompleted, setIsCompleted] = useState(false);
   const [selectedSection, setSelectedSection] = useState(null);
@@ -21,6 +22,8 @@ function App() {
   const [longWordThreshold, setLongWordThreshold] = useState(0.6); // 3글자 이상 단어 유사율
   const [currentScore, setCurrentScore] = useState(0); // 현재 점수
   const [maxScore, setMaxScore] = useState(0); // 최대 점수 (총 문제 수)
+  const [speechSupported, setSpeechSupported] = useState(true); // 음성인식 지원 여부
+  const [userStartedSpeech, setUserStartedSpeech] = useState(false); // 사용자가 수동으로 음성인식 시작했는지
 
   const getFilteredWords = useCallback(() => {
     if (selectedSection === 'all') {
@@ -50,7 +53,6 @@ function App() {
     setCurrentWord(word);
     setShowKorean(showKoreanFirst);
     setShowAnswer(false);
-    setShowHint(false);
     setUsedWords([...usedWords, wordIndex]);
     setSpeechInput('');
     setIsListening(false);
@@ -59,17 +61,8 @@ function App() {
     if (recognitionRef.current) {
       recognitionRef.current.stop();
     }
-  }, [usedWords, getFilteredWords, languageMode]);
+  }, [usedWords, getFilteredWords]);
 
-  const resetStudy = useCallback(() => {
-    setUsedWords([]);
-    setIsCompleted(false);
-    setShowAnswer(false);
-    setShowHint(false);
-    setLanguageMode('korean');
-    setSpeechInput('');
-    setIsListening(false);
-  }, []);
 
   const selectSection = useCallback((section) => {
     const filteredWords = section === 'all' ? wordsData : wordsData.filter(word => word.section === section);
@@ -78,7 +71,6 @@ function App() {
     setUsedWords([]);
     setIsCompleted(false);
     setShowAnswer(false);
-    setShowHint(false);
     setSpeechInput('');
     setIsListening(false);
     setCurrentScore(0);
@@ -92,7 +84,6 @@ function App() {
     setUsedWords([]);
     setIsCompleted(false);
     setShowAnswer(false);
-    setShowHint(false);
     setSpeechInput('');
     setIsListening(false);
     if (recognitionRef.current) {
@@ -164,8 +155,10 @@ function App() {
   const initSpeechRecognition = useCallback(() => {
     if (!('webkitSpeechRecognition' in window) && !('SpeechRecognition' in window)) {
       console.log('음성인식이 지원되지 않는 브라우저입니다.');
+      setSpeechSupported(false);
       return;
     }
+    setSpeechSupported(true);
 
     const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
     const recognition = new SpeechRecognition();
@@ -685,15 +678,22 @@ function App() {
     }
   }, []);
 
+  // 모바일 디바이스 감지 함수
+  const isMobileDevice = () => {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  };
+
   useEffect(() => {
     if (currentWord && !showSectionSelect) {
       initSpeechRecognition();
-      // 문제가 시작되면 자동으로 음성인식 시작
-      setTimeout(() => {
-        startSpeechRecognition();
-      }, 100);
+      // 사용자가 이미 수동으로 시작했거나 데스크톱에서는 자동 시작
+      if (userStartedSpeech || !isMobileDevice()) {
+        setTimeout(() => {
+          startSpeechRecognition();
+        }, 100);
+      }
     }
-  }, [currentWord, showKorean, initSpeechRecognition, showSectionSelect, startSpeechRecognition]);
+  }, [currentWord, showKorean, initSpeechRecognition, showSectionSelect, startSpeechRecognition, userStartedSpeech]);
 
   useEffect(() => {
     document.addEventListener('keydown', handleKeyDown);
@@ -854,7 +854,26 @@ function App() {
                 </div>
 
                 <div className="voice-controls">
-                  <button 
+                  {speechSupported && (!userStartedSpeech && isMobileDevice()) && (
+                    <button
+                      className="mic-button"
+                      onClick={() => {
+                        setUserStartedSpeech(true);
+                        startSpeechRecognition();
+                      }}
+                    >
+                      🎤 음성인식 시작
+                    </button>
+                  )}
+                  {speechSupported && userStartedSpeech && (
+                    <button
+                      className={`mic-button ${isListening ? 'listening' : ''}`}
+                      onClick={isListening ? stopSpeechRecognition : startSpeechRecognition}
+                    >
+                      {isListening ? '🔴 음성인식 중지' : '🎤 음성인식 시작'}
+                    </button>
+                  )}
+                  <button
                     className="answer-button"
                     onClick={() => {
                       if (!showAnswer) {
@@ -870,10 +889,21 @@ function App() {
                 </div>
 
                 <div className="instructions">
-                  <p>🎤 음성인식이 자동으로 시작됩니다. 답을 말하거나 스페이스바를 눌러 정답 확인</p>
-                  {!('webkitSpeechRecognition' in window) && !('SpeechRecognition' in window) && (
-                    <p style={{color: '#f44336', fontSize: '0.9rem', marginTop: '10px'}}>
+                  {speechSupported ? (
+                    <p>
+                      {isMobileDevice() && !userStartedSpeech
+                        ? '🎤 위의 "음성인식 시작" 버튼을 눌러 음성인식을 시작하세요'
+                        : '🎤 음성인식이 자동으로 시작됩니다. 답을 말하거나 스페이스바를 눌러 정답 확인'
+                      }
+                    </p>
+                  ) : (
+                    <p style={{color: '#f44336', fontSize: '0.9rem'}}>
                       ⚠️ 현재 브라우저에서는 음성인식을 지원하지 않습니다. Chrome 브라우저를 사용해주세요.
+                    </p>
+                  )}
+                  {isMobileDevice() && speechSupported && (
+                    <p style={{color: '#61dafb', fontSize: '0.9rem', marginTop: '10px'}}>
+                      📱 모바일에서는 보안상 사용자가 직접 음성인식을 시작해야 합니다.
                     </p>
                   )}
                 </div>

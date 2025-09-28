@@ -1257,5 +1257,257 @@
     "en_hint": "What kind of + 명사 + do you ~?",
     "kr_hint": "당신은 어떤 ~을 …하나요?",
     "section": 27
+  },
+  {
+    "english": "I am upset that people forget to say hello.",
+    "korean": "사람들이 인사하는 것을 잊어서 속상해요.",
+    "en_hint": "I’m upset/happy that + 문장",
+    "kr_hint": "~해서 속상해요 / 기뻐요",
+    "section": 37
+  },
+  {
+    "english": "I am upset that my friend always teases me.",
+    "korean": "친구가 자꾸 놀려서 속상해요.",
+    "en_hint": "I’m upset/happy that + 문장",
+    "kr_hint": "~해서 속상해요 / 기뻐요",
+    "section": 37
+  },
+  {
+    "english": "I am upset that I gained weight.",
+    "korean": "살이 쪄서 속상해요.",
+    "en_hint": "I’m upset/happy that + 문장",
+    "kr_hint": "~해서 속상해요 / 기뻐요",
+    "section": 37
+  },
+  {
+    "english": "I am upset that he doesn’t answer my call.",
+    "korean": "그가 전화를 안 받아서 속상해요.",
+    "en_hint": "I’m upset/happy that + 문장",
+    "kr_hint": "~해서 속상해요 / 기뻐요",
+    "section": 37
+  },
+  {
+    "english": "I am upset that I don’t have it.",
+    "korean": "그게 없어서 속상해요.",
+    "en_hint": "I’m upset/happy that + 문장",
+    "kr_hint": "~해서 속상해요 / 기뻐요",
+    "section": 37
+  },
+  {
+    "english": "I am upset that she didn’t reply to me.",
+    "korean": "그녀가 내 문자에 답하지 않아서 화가 나.",
+    "en_hint": "I’m upset/happy that + 문장",
+    "kr_hint": "~해서 속상해요 / 기뻐요",
+    "section": 37
+  },
+  {
+    "english": "I am happy that you got a job.",
+    "korean": "네가 직업을 구해서 기뻐.",
+    "en_hint": "I’m upset/happy that + 문장",
+    "kr_hint": "~해서 속상해요 / 기뻐요",
+    "section": 37
+  },
+  {
+    "english": "I am happy that you finally got a driver’s license.",
+    "korean": "네가 운전면허를 따서 기뻐.",
+    "en_hint": "I’m upset/happy that + 문장",
+    "kr_hint": "~해서 속상해요 / 기뻐요",
+    "section": 37
+  },
+  {
+    "english": "I am happy that it was successful.",
+    "korean": "그것이 성공적이어서 기쁘다.",
+    "en_hint": "I’m upset/happy that + 문장",
+    "kr_hint": "~해서 속상해요 / 기뻐요",
+    "section": 37
+  },
+  {
+    "english": "When I don’t feel well, I get some sleep.",
+    "korean": "몸이 좋지 않을 때 저는 잠을 자요.",
+    "en_hint": "When I + 동사",
+    "kr_hint": "~할 때",
+    "section": 38
+  },
+  {
+    "english": "When I watch TV, I switch the channel a lot.",
+    "korean": "나는 티비를 볼 때 채널을 많이 돌려요.",
+    "en_hint": "When I + 동사",
+    "kr_hint": "~할 때",
+    "section": 38
+  },
+  {
+    "english": "When I stay at home, I do my house chores.",
+    "korean": "집에 있을 때 집안일을 해요.",
+    "en_hint": "When I + 동사",
+    "kr_hint": "~할 때",
+    "section": 38
+  },
+  {
+    "english": "When I hang out with friends, I usually go to a karaoke bar.",
+    "korean": "친구들과 놀 때 보통 노래방에 가요.",
+    "en_hint": "When I + 동사",
+    "kr_hint": "~할 때",
+    "section": 38
+  },
+  {
+    "english": "When I need something, I shop online.",
+    "korean": "필요한 게 있으면 인터넷 쇼핑을 해요.",
+    "en_hint": "When I + 동사",
+    "kr_hint": "~할 때",
+    "section": 38
+  },
+  {
+    "english": "When I travel, I always post pictures on social media.",
+    "korean": "여행을 가면 항상 SNS에 사진을 올려요.",
+    "en_hint": "When I + 동사",
+    "kr_hint": "~할 때",
+    "section": 38
+  },
+  {
+    "english": "When I am bored, I watch YouTube.",
+    "korean": "지루할 때 유튜브를 봐요.",
+    "en_hint": "When I + 동사",
+    "kr_hint": "~할 때",
+    "section": 38
+  },
+  {
+    "english": "When I am tired, I drink coffee.",
+    "korean": "피곤할 때 커피를 마셔요.",
+    "en_hint": "When I + 동사",
+    "kr_hint": "~할 때",
+    "section": 38
+  },
+  {
+    "english": "When you are sad, you should eat more chocolates.",
+    "korean": "슬플 때는 초콜릿을 더 많이 먹어야 해요.",
+    "en_hint": "When I + 동사",
+    "kr_hint": "~할 때",
+    "section": 38
+  },
+  {
+    "english": "If I arrive early, I will wait for you at the cafe.",
+    "korean": "일찍 도착하면 카페에서 당신을 기다릴게요.",
+    "en_hint": "If I + 동사, I will + 동사",
+    "kr_hint": "만약 ~하면 ~할 거예요",
+    "section": 39
+  },
+  {
+    "english": "If I don’t try, I will regret it.",
+    "korean": "시도도 안 하면 나중에 후회할 거예요.",
+    "en_hint": "If I + 동사, I will + 동사",
+    "kr_hint": "만약 ~하면 ~할 거예요",
+    "section": 39
+  },
+  {
+    "english": "If I meet her again, I won’t make the same mistakes.",
+    "korean": "그녀를 다시 만나면 같은 실수를 하지 않을 거예요.",
+    "en_hint": "If I + 동사, I will + 동사",
+    "kr_hint": "만약 ~하면 ~할 거예요",
+    "section": 39
+  },
+  {
+    "english": "If I win the lottery, I will not tell you.",
+    "korean": "만약 로또에 당첨되면 너에게 말 안 할 거야.",
+    "en_hint": "If I + 동사, I will + 동사",
+    "kr_hint": "만약 ~하면 ~할 거예요",
+    "section": 39
+  },
+  {
+    "english": "If you are going, I will go, too.",
+    "korean": "네가 가면 나도 갈게.",
+    "en_hint": "If I + 동사, I will + 동사",
+    "kr_hint": "만약 ~하면 ~할 거예요",
+    "section": 39
+  },
+  {
+    "english": "If you like it, let me know.",
+    "korean": "당신이 좋다면 알려주세요.",
+    "en_hint": "If I + 동사, I will + 동사",
+    "kr_hint": "만약 ~하면 ~할 거예요",
+    "section": 39
+  },
+  {
+    "english": "If you allow, I would like to make a suggestion.",
+    "korean": "당신이 허락하면 제안 하나 하고 싶어요.",
+    "en_hint": "If I + 동사, I would + 동사",
+    "kr_hint": "만약 ~한다면 ~할 것 같아요",
+    "section": 39
+  },
+  {
+    "english": "If you are late, you will miss the beginning.",
+    "korean": "네가 늦으면, 시작을 놓칠거야.",
+    "en_hint": "If I + 동사, I will + 동사",
+    "kr_hint": "만약 ~하면 ~할 거예요",
+    "section": 39
+  },
+  {
+    "english": "If it rains tomorrow, I will just stay indoors.",
+    "korean": "내일 비가 오면 난 그냥 실내에 머물거야.",
+    "en_hint": "If I + 동사, I will + 동사",
+    "kr_hint": "만약 ~하면 ~할 거예요",
+    "section": 39
+  },
+  {
+    "english": "I would feel a little awkward.",
+    "korean": "저는 조금 어색할 것 같아요.",
+    "en_hint": "I would + 동사",
+    "kr_hint": "나는 ~할 것 같아요",
+    "section": 40
+  },
+  {
+    "english": "I would get a cheaper one.",
+    "korean": "저는 더 저렴한 걸 살 거예요.",
+    "en_hint": "I would + 동사",
+    "kr_hint": "나는 ~할 것 같아요",
+    "section": 40
+  },
+  {
+    "english": "I would talk to my boss.",
+    "korean": "제 상사랑 이야기해 볼 것 같아요.",
+    "en_hint": "I would + 동사",
+    "kr_hint": "나는 ~할 것 같아요",
+    "section": 40
+  },
+  {
+    "english": "I would get a refund.",
+    "korean": "저라면 환불 받을 거예요.",
+    "en_hint": "I would + 동사",
+    "kr_hint": "나는 ~할 것 같아요",
+    "section": 40
+  },
+  {
+    "english": "I would travel around the world.",
+    "korean": "저는 세계 곳곳을 여행할 거예요.",
+    "en_hint": "I would + 동사",
+    "kr_hint": "나는 ~할 것 같아요",
+    "section": 40
+  },
+  {
+    "english": "I would save the money for the future.",
+    "korean": "저라면 미래를 위해 저축할 거예요.",
+    "en_hint": "I would + 동사",
+    "kr_hint": "나는 ~할 것 같아요",
+    "section": 40
+  },
+  {
+    "english": "I would drink less.",
+    "korean": "저라면 더 적게 마실 거예요.",
+    "en_hint": "I would + 동사",
+    "kr_hint": "나는 ~할 것 같아요",
+    "section": 40
+  },
+  {
+    "english": "I would take the subway.",
+    "korean": "저라면 지하철을 탈 것 같아요.",
+    "en_hint": "I would + 동사",
+    "kr_hint": "나는 ~할 것 같아요",
+    "section": 40
+  },
+  {
+    "english": "I would say no in that situation.",
+    "korean": "나는 그런 상황에서 아니라고 말할 거야.",
+    "en_hint": "I would + 동사",
+    "kr_hint": "나는 ~할 것 같아요",
+    "section": 40
   }
 ]
