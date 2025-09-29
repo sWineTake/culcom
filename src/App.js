@@ -808,6 +808,19 @@ function App() {
                 </div>
               </div>
 
+              <div className="support-section">
+                <h3>버그 및 기능개선 리포팅</h3>
+                <button
+                  className="kakao-chat-button"
+                  onClick={() => window.open('https://open.kakao.com/o/sEpuWAUh', '_blank')}
+                >
+                  💬 카카오톡 오픈채팅방
+                </button>
+                <p className="support-description">
+                  버그 신고나 기능 개선 제안이 있으시면 오픈채팅방으로 연락해주세요!
+                </p>
+              </div>
+
               <div className="signature-section">
                 <div className="signature-container">
                   <img

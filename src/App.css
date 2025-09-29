@@ -640,7 +640,7 @@
     margin: 15px 0 20px 0;
     padding: 20px 15px;
   }
-  
+
   .word-display h2 {
     font-size: clamp(1.2rem, 4vw, 2.5rem);
     line-height: 1.3;
@@ -684,16 +684,16 @@
   }
 
   .section-buttons {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 15px;
     padding: 0 15px;
-    max-width: 400px;
+    max-width: 450px;
   }
 
   .section-button {
-    padding: 25px 15px;
+    padding: 20px 10px;
     min-height: 75px;
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
   .hint-button {
@@ -815,7 +815,7 @@
     padding: 15px 10px;
     margin: 12px 0;
   }
-  
+
   .word-display h2 {
     font-size: clamp(1rem, 3.5vw, 2rem);
     line-height: 1.4;
@@ -825,12 +825,12 @@
     padding: 5px;
     padding-top: 30px;
   }
-  
+
   .section-select-screen h1 {
     font-size: 1.5rem;
     margin-bottom: 12px;
   }
-  
+
   .section-select-screen h2 {
     font-size: 1rem;
     margin-bottom: 15px;
@@ -838,14 +838,16 @@
   }
 
   .section-button {
-    padding: 20px 10px;
+    padding: 18px 8px;
     min-height: 65px;
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
-  
+
   .section-buttons {
+    grid-template-columns: 1fr 1fr;
     padding: 0 10px;
     gap: 12px;
+    max-width: 400px;
   }
 
   .mic-button,
@@ -945,25 +947,27 @@
   .App-header {
     padding: 8px;
   }
-  
+
   .word-display {
     padding: 12px 8px;
     margin: 10px 0;
   }
-  
+
   .word-display h2 {
     font-size: clamp(0.9rem, 3vw, 1.8rem);
   }
-  
+
   .section-buttons {
+    grid-template-columns: 1fr 1fr;
     padding: 0 8px;
     gap: 10px;
+    max-width: 350px;
   }
-  
+
   .section-button {
-    padding: 18px 8px;
+    padding: 16px 6px;
     min-height: 60px;
-    font-size: 0.95rem;
+    font-size: 0.85rem;
   }
   
   .mic-button,
@@ -1397,7 +1401,8 @@
 
 .back-to-main-button {
   position: absolute;
-  right: 0;
+  top: -10px;
+  right: -10px;
   padding: 10px 15px;
   font-size: 1rem;
   border: none;
@@ -1407,6 +1412,7 @@
   cursor: pointer;
   font-weight: bold;
   transition: all 0.3s ease;
+  z-index: 10;
 }
 
 .back-to-main-button:hover {
@@ -1445,7 +1451,8 @@
 
 .settings-button {
   position: absolute;
-  right: 0;
+  top: -10px;
+  right: -10px;
   padding: 10px 15px;
   font-size: 1rem;
   border: none;
@@ -1458,6 +1465,7 @@
   display: flex;
   align-items: center;
   gap: 5px;
+  z-index: 10;
 }
 
 .settings-button:hover {
@@ -1610,5 +1618,95 @@
 
   .developer-info {
     font-size: 0.95rem;
+  }
+}
+
+/* 버그 및 기능개선 리포팅 섹션 스타일 */
+.support-section {
+  margin: 30px 0;
+  padding: 25px;
+  background-color: #3a3f4a;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.support-section h3 {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  color: #61dafb;
+  font-weight: bold;
+}
+
+.kakao-chat-button {
+  background: linear-gradient(45deg, #FEE500, #FFEB3B);
+  color: #3C1E1E;
+  border: none;
+  padding: 15px 25px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 12px rgba(254, 229, 0, 0.3);
+  margin-bottom: 15px;
+}
+
+.kakao-chat-button:hover {
+  background: linear-gradient(45deg, #FFD600, #FFC107);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(254, 229, 0, 0.4);
+}
+
+.kakao-chat-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(254, 229, 0, 0.3);
+}
+
+.support-description {
+  font-size: 0.95rem;
+  color: #b0b7c3;
+  line-height: 1.5;
+  margin: 0;
+  text-align: center;
+}
+
+/* 모바일 반응형 디자인 */
+@media (max-width: 768px) {
+  .support-section {
+    margin: 20px 0;
+    padding: 20px;
+  }
+
+  .support-section h3 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+  }
+
+  .kakao-chat-button {
+    padding: 12px 20px;
+    font-size: 1rem;
+  }
+
+  .support-description {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .support-section {
+    margin: 15px 0;
+    padding: 15px;
+  }
+
+  .kakao-chat-button {
+    padding: 10px 18px;
+    font-size: 0.95rem;
+  }
+
+  .support-description {
+    font-size: 0.85rem;
   }
 }
