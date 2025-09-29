@@ -956,7 +956,7 @@ function App() {
               <div className="signature-section">
                 <div className="signature-container">
                   <img
-                    src="/image/sign.png"
+                    src={`${process.env.PUBLIC_URL}/image/sign.png`}
                     alt="Eden Signature"
                     className="signature-image"
                   />
