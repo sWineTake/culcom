@@ -259,20 +259,7 @@ function App() {
 
     recognition.onend = () => {
       setIsListening(false);
-
-      // continuous=true이므로 자동 재시작은 브라우저가 처리
-      // 필요시에만 수동으로 재시작
-      if (currentWord && !showAnswer) {
-        setTimeout(() => {
-          if (!isListening && recognitionRef.current) {
-            try {
-              recognitionRef.current.start();
-            } catch (error) {
-              console.log('자동 재시작 실패:', error);
-            }
-          }
-        }, 100);
-      }
+      // 자동 재시작 완전 제거 - 사용자가 버튼으로만 제어
     };
 
       recognitionRef.current = recognition;
@@ -850,16 +837,9 @@ function App() {
   useEffect(() => {
     if (currentWord && !showSectionSelect) {
       initSpeechRecognition();
-      // iOS와 데스크톱에서는 자동 시작, Android만 수동 시작
-      const isAndroid = /Android/i.test(navigator.userAgent);
-
-      if (userStartedSpeech || !isMobileDevice() || !isAndroid) {
-        setTimeout(() => {
-          startSpeechRecognition();
-        }, 100);
-      }
+      // 모든 플랫폼에서 자동 시작 제거 - 사용자가 직접 버튼으로만 시작
     }
-  }, [currentWord, showKorean, initSpeechRecognition, showSectionSelect, startSpeechRecognition, userStartedSpeech]);
+  }, [currentWord, showKorean, initSpeechRecognition, showSectionSelect]);
 
   useEffect(() => {
     document.addEventListener('keydown', handleKeyDown);
@@ -1071,32 +1051,18 @@ function App() {
                 </div>
 
                 <div className="voice-controls">
-                  {speechSupported && (!userStartedSpeech && /Android/i.test(navigator.userAgent)) && (
-                    <button
-                      className="mic-button"
-                      onClick={(e) => {
-                        e.preventDefault(); // 기본 동작 방지
-                        console.log('=== 첫 음성인식 시작 버튼 클릭됨 (Android) ===');
-
-                        // 즉시 UI 상태 업데이트하여 깜빡임 방지
-                        setUserStartedSpeech(true);
-
-                        // 약간의 지연 후 음성인식 시작
-                        setTimeout(() => {
-                          startSpeechRecognition();
-                        }, 50);
-                      }}
-                    >
-                      🎤 음성인식 시작
-                    </button>
-                  )}
-                  {speechSupported && userStartedSpeech && (
+                  {speechSupported && (
                     <button
                       className={`mic-button ${isListening ? 'listening' : ''}`}
                       onClick={(e) => {
-                        console.log('=== 두 번째 음성인식 버튼 클릭됨 ===');
-                        console.log('이벤트:', e);
+                        e.preventDefault(); // 기본 동작 방지
+                        console.log('=== 음성인식 버튼 클릭됨 (모든 플랫폼 통일) ===');
                         console.log('현재 상태:', isListening ? '듣는 중' : '대기 중');
+
+                        // 첫 번째 클릭이면 userStartedSpeech를 true로 설정
+                        if (!userStartedSpeech) {
+                          setUserStartedSpeech(true);
+                        }
 
                         if (isListening) {
                           stopSpeechRecognition();
@@ -1104,8 +1070,6 @@ function App() {
                           startSpeechRecognition();
                         }
                       }}
-                      onTouchStart={() => console.log('두 번째 버튼 터치 시작')}
-                      onTouchEnd={() => console.log('두 번째 버튼 터치 끝')}
                     >
                       {isListening ? '🔴 음성인식 중지' : '🎤 음성인식 시작'}
                     </button>
@@ -1128,7 +1092,7 @@ function App() {
                 <div className="instructions">
                   {speechSupported ? (
                     <p>
-                      {/Android/i.test(navigator.userAgent) && !userStartedSpeech
+                      {!userStartedSpeech
                         ? '🎤 위의 "음성인식 시작" 버튼을 눌러 음성인식을 시작하세요'
                         : '🎤 음성 인식 중 입니다.'
                       }
@@ -1145,11 +1109,9 @@ function App() {
                       )}
                     </div>
                   )}
-                  {/Android/i.test(navigator.userAgent) && speechSupported && (
-                    <p style={{color: '#61dafb', fontSize: '0.9rem', marginTop: '10px'}}>
-                      📱 Android에서는 보안상 사용자가 직접 음성인식을 시작해야 합니다.
-                    </p>
-                  )}
+                  <p style={{color: '#61dafb', fontSize: '0.9rem', marginTop: '10px'}}>
+                    📱 모든 플랫폼에서 사용자가 직접 음성인식을 시작합니다.
+                  </p>
                 </div>
               </>
             )}
