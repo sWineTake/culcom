@@ -170,24 +170,62 @@ function App() {
   }, []);
 
   const initSpeechRecognition = useCallback(() => {
-    if (!('webkitSpeechRecognition' in window) && !('SpeechRecognition' in window)) {
+    console.log('=== initSpeechRecognition 시작 ===');
+
+    // 브라우저 지원 확인
+    const hasWebkitSpeechRecognition = 'webkitSpeechRecognition' in window;
+    const hasSpeechRecognition = 'SpeechRecognition' in window;
+
+    console.log('webkitSpeechRecognition 지원:', hasWebkitSpeechRecognition);
+    console.log('SpeechRecognition 지원:', hasSpeechRecognition);
+    console.log('User Agent:', navigator.userAgent);
+
+    // iOS Safari 특별 처리 - 더 관대한 접근
+    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+    const isIOSSafari = isIOS && !window.chrome && !window.CriOS;
+
+    console.log('iOS 감지:', isIOS);
+    console.log('iOS Safari 감지:', isIOSSafari);
+    console.log('Chrome iOS 감지:', window.CriOS);
+
+    // iOS에서도 음성인식 시도해보기 (완전히 차단하지 않음)
+    if (isIOSSafari && !hasWebkitSpeechRecognition && !hasSpeechRecognition) {
+      console.log('iOS Safari에서 음성인식이 지원되지 않습니다.');
+      setSpeechSupported(false);
+      return;
+    }
+
+    if (!hasWebkitSpeechRecognition && !hasSpeechRecognition) {
       console.log('음성인식이 지원되지 않는 브라우저입니다.');
       setSpeechSupported(false);
       return;
     }
     setSpeechSupported(true);
 
-    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-    const recognition = new SpeechRecognition();
+    try {
+      const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+      const recognition = new SpeechRecognition();
 
-    recognition.continuous = true;
-    recognition.interimResults = true;
-    recognition.lang = showKorean ? 'en-US' : 'ko-KR';
-    recognition.maxAlternatives = 1;
+      // 모바일 최적화 설정
+      const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
-    recognition.onstart = () => {
-      setIsListening(true);
-    };
+      recognition.continuous = false; // 모든 환경에서 false로 통일
+      recognition.interimResults = true;
+      recognition.lang = showKorean ? 'en-US' : 'ko-KR';
+      recognition.maxAlternatives = 1;
+
+      console.log('Recognition 객체 생성 성공');
+      console.log('설정:', {
+        continuous: recognition.continuous,
+        interimResults: recognition.interimResults,
+        lang: recognition.lang,
+        maxAlternatives: recognition.maxAlternatives
+      });
+
+      recognition.onstart = () => {
+        console.log('음성인식 시작됨');
+        setIsListening(true);
+      };
 
     recognition.onresult = (event) => {
       let finalTranscript = '';
@@ -202,16 +240,14 @@ function App() {
         }
       }
 
-      // 기존 speechInput과 새로운 결과를 누적
+      // 최종 결과만 speechInput에 저장 (미리보기 방지)
       setSpeechInput(prev => {
-        const newInput = finalTranscript + interimTranscript;
         if (finalTranscript) {
           // 최종 결과가 있으면 기존 내용에 추가
-          return (prev + ' ' + newInput).trim();
+          return (prev + ' ' + finalTranscript).trim();
         } else {
-          // 중간 결과만 있으면 기존 최종 결과 + 현재 중간 결과
-          const existingFinal = prev.split(' ').filter(word => word.trim()).join(' ');
-          return (existingFinal + ' ' + interimTranscript).trim();
+          // 중간 결과는 무시하여 미리보기 방지
+          return prev;
         }
       });
     };
@@ -223,10 +259,30 @@ function App() {
 
     recognition.onend = () => {
       setIsListening(false);
+
+      // 모바일에서는 자동으로 다시 시작 (continuous=false이므로)
+      const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+      if (isMobile && userStartedSpeech && currentWord && !showAnswer) {
+        setTimeout(() => {
+          if (!isListening && recognitionRef.current) {
+            try {
+              recognitionRef.current.start();
+            } catch (error) {
+              console.log('자동 재시작 실패:', error);
+            }
+          }
+        }, 300);
+      }
     };
 
-    recognitionRef.current = recognition;
-  }, [showKorean, currentWord, getNextWord, calculateSimilarity]);
+      recognitionRef.current = recognition;
+
+    } catch (error) {
+      console.error('Recognition 객체 생성 실패:', error);
+      setSpeechSupported(false);
+      return;
+    }
+  }, [showKorean, currentWord, userStartedSpeech]);
 
 
   const levenshteinDistance = (str1, str2) => {
@@ -258,18 +314,92 @@ function App() {
   };
 
   const startSpeechRecognition = useCallback(() => {
-    if (recognitionRef.current && !isListening) {
-      try {
-        recognitionRef.current.start();
-      } catch (error) {
-        if (error.name === 'InvalidStateError') {
-          console.log('Speech recognition is already running');
+    console.log('=== startSpeechRecognition 호출됨 ===');
+    console.log('User Agent:', navigator.userAgent);
+    console.log('recognitionRef.current:', recognitionRef.current);
+    console.log('isListening:', isListening);
+    console.log('speechSupported:', speechSupported);
+    console.log('userStartedSpeech:', userStartedSpeech);
+
+    // 모바일 환경 체크
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    console.log('isMobile:', isMobile);
+
+    // Speech Recognition 지원 체크
+    const hasWebkitSpeechRecognition = 'webkitSpeechRecognition' in window;
+    const hasSpeechRecognition = 'SpeechRecognition' in window;
+    console.log('webkitSpeechRecognition 지원:', hasWebkitSpeechRecognition);
+    console.log('SpeechRecognition 지원:', hasSpeechRecognition);
+
+    if (!hasWebkitSpeechRecognition && !hasSpeechRecognition) {
+      console.error('음성인식이 지원되지 않는 브라우저입니다.');
+      alert('음성인식이 지원되지 않는 브라우저입니다. Chrome 브라우저를 사용해주세요.');
+      return;
+    }
+
+    if (!recognitionRef.current) {
+      console.log('recognition이 초기화되지 않음. 다시 초기화 시도...');
+      initSpeechRecognition();
+      // 초기화 후 잠시 기다렸다가 다시 시도
+      setTimeout(() => {
+        if (recognitionRef.current) {
+          startSpeechRecognition();
         } else {
-          console.error('Speech recognition error:', error);
+          console.error('recognition 초기화 실패');
+          alert('음성인식을 초기화할 수 없습니다. 페이지를 새로고침해보세요.');
         }
+      }, 100);
+      return;
+    }
+
+    if (isListening) {
+      console.log('이미 음성인식이 실행 중입니다.');
+      return;
+    }
+
+    try {
+      console.log('음성인식 시작 시도...');
+
+      // 모바일에서는 사용자 제스처 컨텍스트 확인
+      if (isMobile) {
+        console.log('모바일 환경에서 음성인식 시작');
+      }
+
+      recognitionRef.current.start();
+      console.log('음성인식 시작 성공');
+    } catch (error) {
+      console.error('음성인식 시작 오류:', error);
+      console.error('오류 타입:', error.name);
+      console.error('오류 메시지:', error.message);
+
+      if (error.name === 'InvalidStateError') {
+        console.log('InvalidStateError: 음성인식이 이미 실행 중이거나 중지 중입니다.');
+        // 강제로 중지한 후 다시 시작
+        try {
+          recognitionRef.current.stop();
+          setTimeout(() => {
+            try {
+              recognitionRef.current.start();
+            } catch (retryError) {
+              console.error('재시도 중 오류:', retryError);
+              alert('음성인식을 시작할 수 없습니다. 다시 시도해주세요.');
+            }
+          }, 200);
+        } catch (stopError) {
+          console.error('중지 중 오류:', stopError);
+        }
+      } else if (error.name === 'NotAllowedError') {
+        console.error('마이크 권한이 거부되었습니다.');
+        alert('마이크 권한을 허용해주세요. 브라우저 설정에서 마이크 권한을 확인해주세요.');
+      } else if (error.name === 'ServiceNotAllowedError') {
+        console.error('음성인식 서비스가 허용되지 않습니다.');
+        alert('음성인식 서비스가 허용되지 않습니다. HTTPS 연결을 사용해주세요.');
+      } else {
+        console.error('기타 음성인식 오류:', error.name, error.message);
+        alert(`음성인식 오류: ${error.message}`);
       }
     }
-  }, [isListening]);
+  }, [isListening, initSpeechRecognition, speechSupported, userStartedSpeech]);
 
   const stopSpeechRecognition = useCallback(() => {
     if (recognitionRef.current && isListening) {
@@ -720,8 +850,10 @@ function App() {
   useEffect(() => {
     if (currentWord && !showSectionSelect) {
       initSpeechRecognition();
-      // 사용자가 이미 수동으로 시작했거나 데스크톱에서는 자동 시작
-      if (userStartedSpeech || !isMobileDevice()) {
+      // iOS와 데스크톱에서는 자동 시작, Android만 수동 시작
+      const isAndroid = /Android/i.test(navigator.userAgent);
+
+      if (userStartedSpeech || !isMobileDevice() || !isAndroid) {
         setTimeout(() => {
           startSpeechRecognition();
         }, 100);
@@ -926,11 +1058,11 @@ function App() {
 
                 <div className="speech-input-section">
                   {isListening ? (
-                    <p className="speech-result listening-indicator">🎤 음성을 인식하고 있습니다...</p>
+                    <p className="speech-result listening-indicator">🎤 듣는 중...</p>
                   ) : speechInput ? (
                     <p className="speech-result">음성 입력: {speechInput}</p>
                   ) : (
-                    <p className="speech-result placeholder">자동으로 음성인식이 시작됩니다. 답을 말해주세요!</p>
+                    <p className="speech-result placeholder">답을 말해주세요!</p>
                   )}
                 </div>
 
@@ -939,12 +1071,20 @@ function App() {
                 </div>
 
                 <div className="voice-controls">
-                  {speechSupported && (!userStartedSpeech && isMobileDevice()) && (
+                  {speechSupported && (!userStartedSpeech && /Android/i.test(navigator.userAgent)) && (
                     <button
                       className="mic-button"
-                      onClick={() => {
+                      onClick={(e) => {
+                        e.preventDefault(); // 기본 동작 방지
+                        console.log('=== 첫 음성인식 시작 버튼 클릭됨 (Android) ===');
+
+                        // 즉시 UI 상태 업데이트하여 깜빡임 방지
                         setUserStartedSpeech(true);
-                        startSpeechRecognition();
+
+                        // 약간의 지연 후 음성인식 시작
+                        setTimeout(() => {
+                          startSpeechRecognition();
+                        }, 50);
                       }}
                     >
                       🎤 음성인식 시작
@@ -953,7 +1093,19 @@ function App() {
                   {speechSupported && userStartedSpeech && (
                     <button
                       className={`mic-button ${isListening ? 'listening' : ''}`}
-                      onClick={isListening ? stopSpeechRecognition : startSpeechRecognition}
+                      onClick={(e) => {
+                        console.log('=== 두 번째 음성인식 버튼 클릭됨 ===');
+                        console.log('이벤트:', e);
+                        console.log('현재 상태:', isListening ? '듣는 중' : '대기 중');
+
+                        if (isListening) {
+                          stopSpeechRecognition();
+                        } else {
+                          startSpeechRecognition();
+                        }
+                      }}
+                      onTouchStart={() => console.log('두 번째 버튼 터치 시작')}
+                      onTouchEnd={() => console.log('두 번째 버튼 터치 끝')}
                     >
                       {isListening ? '🔴 음성인식 중지' : '🎤 음성인식 시작'}
                     </button>
@@ -976,19 +1128,26 @@ function App() {
                 <div className="instructions">
                   {speechSupported ? (
                     <p>
-                      {isMobileDevice() && !userStartedSpeech
+                      {/Android/i.test(navigator.userAgent) && !userStartedSpeech
                         ? '🎤 위의 "음성인식 시작" 버튼을 눌러 음성인식을 시작하세요'
                         : '🎤 음성 인식 중 입니다.'
                       }
                     </p>
                   ) : (
-                    <p style={{color: '#f44336', fontSize: '0.9rem'}}>
-                      ⚠️ 현재 브라우저에서는 음성인식을 지원하지 않습니다. Chrome 브라우저를 사용해주세요.
-                    </p>
+                    <div>
+                      <p style={{color: '#f44336', fontSize: '0.9rem'}}>
+                        ⚠️ 현재 브라우저에서는 음성인식을 지원하지 않습니다.
+                      </p>
+                      {/iPad|iPhone|iPod/.test(navigator.userAgent) && (
+                        <p style={{color: '#ff9800', fontSize: '0.8rem', marginTop: '5px'}}>
+                          📱 iOS에서는 Chrome 브라우저나 Edge 브라우저를 사용해주세요.
+                        </p>
+                      )}
+                    </div>
                   )}
-                  {isMobileDevice() && speechSupported && (
+                  {/Android/i.test(navigator.userAgent) && speechSupported && (
                     <p style={{color: '#61dafb', fontSize: '0.9rem', marginTop: '10px'}}>
-                      📱 모바일에서는 보안상 사용자가 직접 음성인식을 시작해야 합니다.
+                      📱 Android에서는 보안상 사용자가 직접 음성인식을 시작해야 합니다.
                     </p>
                   )}
                 </div>

@@ -1891,177 +1891,212 @@
   },
   {
     "english": "What did you eat for lunch?",
-    "korean": "점심에 뭐 먹었어?",
+    "korean": "점심으로 뭐 먹었어?",
     "en_hint": "What/When/Where did you + 동사?",
-    "kr_hint": "무엇/언제/어디서 ~했나요?",
+    "kr_hint": "무엇/언제/어디에서 ~ 했나요?",
     "section": 28
   },
   {
-    "english": "What did you do last night?",
-    "korean": "어제 밤에 뭐 했어?",
+    "english": "What did you do last weekend?",
+    "korean": "지난 주말에 뭐 했어?",
     "en_hint": "What/When/Where did you + 동사?",
-    "kr_hint": "무엇/언제/어디서 ~했나요?",
+    "kr_hint": "무엇/언제/어디에서 ~ 했나요?",
     "section": 28
   },
   {
-    "english": "What did you see there?",
-    "korean": "거기서 뭐 봤어?",
+    "english": "What did you expect?",
+    "korean": "뭘 기대했던 거야?",
     "en_hint": "What/When/Where did you + 동사?",
-    "kr_hint": "무엇/언제/어디서 ~했나요?",
+    "kr_hint": "무엇/언제/어디에서 ~ 했나요?",
     "section": 28
   },
   {
-    "english": "When did you come here?",
-    "korean": "너 언제 여기 왔어?",
+    "english": "What did you eat?",
+    "korean": "뭐 먹었어?",
     "en_hint": "What/When/Where did you + 동사?",
-    "kr_hint": "무엇/언제/어디서 ~했나요?",
+    "kr_hint": "무엇/언제/어디에서 ~ 했나요?",
     "section": 28
   },
   {
-    "english": "When did you last see her?",
-    "korean": "그녀를 마지막으로 본 게 언제야?",
+    "english": "When did you see me last?",
+    "korean": "너 나를 마지막에 본 게 언제야?",
     "en_hint": "What/When/Where did you + 동사?",
-    "kr_hint": "무엇/언제/어디서 ~했나요?",
+    "kr_hint": "무엇/언제/어디에서 ~ 했나요?",
+    "section": 28
+  },
+  {
+    "english": "When did you finish your assignment?",
+    "korean": "과제 언제 끝냈어?",
+    "en_hint": "What/When/Where did you + 동사?",
+    "kr_hint": "무엇/언제/어디에서 ~ 했나요?",
+    "section": 28
+  },
+  {
+    "english": "Where did you go?",
+    "korean": "어디 갔었어?",
+    "en_hint": "What/When/Where did you + 동사?",
+    "kr_hint": "무엇/언제/어디에서 ~ 했나요?",
     "section": 28
   },
   {
     "english": "Where did you buy this?",
     "korean": "이거 어디서 샀어?",
     "en_hint": "What/When/Where did you + 동사?",
-    "kr_hint": "무엇/언제/어디서 ~했나요?",
-    "section": 28
-  },
-  {
-    "english": "Where did you get that souvenir?",
-    "korean": "그 기념품 어디서 샀어?",
-    "en_hint": "What/When/Where did you + 동사?",
-    "kr_hint": "무엇/언제/어디서 ~했나요?",
+    "kr_hint": "무엇/언제/어디에서 ~ 했나요?",
     "section": 28
   },
   {
     "english": "Where did you go last Saturday?",
-    "korean": "지난 토요일에 어디 갔어?",
+    "korean": "지난 토요일에 어디 갔었어?",
     "en_hint": "What/When/Where did you + 동사?",
-    "kr_hint": "무엇/언제/어디서 ~했나요?",
+    "kr_hint": "무엇/언제/어디에서 ~ 했나요?",
     "section": 28
   },
   {
-    "english": "That’s what she said.",
-    "korean": "그게 그녀가 했던 말이야.",
-    "en_hint": "That’s + what/why/who + 주어 + 동사",
-    "kr_hint": "~것/이유/사람이에요",
+    "english": "When did you last see her?",
+    "korean": "그녀를 마지막으로 본 게 언제야?",
+    "en_hint": "What/When/Where did you + 동사?",
+    "kr_hint": "무엇/언제/어디에서 ~ 했나요?",
+    "section": 28
+  },
+  {
+    "english": "That’s what I mean.",
+    "korean": "제 말이 그 말이에요.",
+    "en_hint": "That’s + what/why + 주어 + 동사",
+    "kr_hint": "바로 그게 ~예요 / 그게 ~한 이유입니다",
     "section": 29
   },
   {
-    "english": "That’s what we did.",
-    "korean": "그게 우리가 했던 거야.",
-    "en_hint": "That’s + what/why/who + 주어 + 동사",
-    "kr_hint": "~것/이유/사람이에요",
+    "english": "That’s what I like about her.",
+    "korean": "그게 내가 그녀를 좋아하는 부분이죠.",
+    "en_hint": "That’s + what/why + 주어 + 동사",
+    "kr_hint": "바로 그게 ~예요 / 그게 ~한 이유입니다",
     "section": 29
   },
   {
-    "english": "That’s what I heard.",
-    "korean": "그게 내가 들은 거야.",
-    "en_hint": "That’s + what/why/who + 주어 + 동사",
-    "kr_hint": "~것/이유/사람이에요",
+    "english": "That’s what we want.",
+    "korean": "그게 우리가 원하는 것이에요.",
+    "en_hint": "That’s + what/why + 주어 + 동사",
+    "kr_hint": "바로 그게 ~예요 / 그게 ~한 이유입니다",
+    "section": 29
+  },
+  {
+    "english": "That’s what they said.",
+    "korean": "그들이 그렇게 말했다고.",
+    "en_hint": "That’s + what/why + 주어 + 동사",
+    "kr_hint": "바로 그게 ~예요 / 그게 ~한 이유입니다",
+    "section": 29
+  },
+  {
+    "english": "That’s what I wonder.",
+    "korean": "그게 내가 궁금하다는 거야.",
+    "en_hint": "That’s + what/why + 주어 + 동사",
+    "kr_hint": "바로 그게 ~예요 / 그게 ~한 이유입니다",
     "section": 29
   },
   {
     "english": "That’s what friends are for.",
-    "korean": "그게 친구들이 있는 이유지.",
-    "en_hint": "That’s + what/why/who + 주어 + 동사",
-    "kr_hint": "~것/이유/사람이에요",
+    "korean": "그게 친구 존재 이유야. (친구 존재하는 이유란거지)",
+    "en_hint": "That’s + what/why + 주어 + 동사",
+    "kr_hint": "바로 그게 ~예요 / 그게 ~한 이유입니다",
     "section": 29
   },
   {
-    "english": "That’s who I was with.",
-    "korean": "그게 내가 같이 있었던 사람이야.",
-    "en_hint": "That’s + what/why/who + 주어 + 동사",
-    "kr_hint": "~것/이유/사람이에요",
-    "section": 29
-  },
-  {
-    "english": "That’s why life goes on.",
-    "korean": "그게 인생이 계속되는 이유야.",
-    "en_hint": "That’s + what/why/who + 주어 + 동사",
-    "kr_hint": "~것/이유/사람이에요",
+    "english": "That’s why I’m upset.",
+    "korean": "그게 내가 화가 나는 이유야.",
+    "en_hint": "That’s + what/why + 주어 + 동사",
+    "kr_hint": "바로 그게 ~예요 / 그게 ~한 이유입니다",
     "section": 29
   },
   {
     "english": "That’s why I like you.",
     "korean": "그게 내가 널 좋아하는 이유야.",
-    "en_hint": "That’s + what/why/who + 주어 + 동사",
-    "kr_hint": "~것/이유/사람이에요",
+    "en_hint": "That’s + what/why + 주어 + 동사",
+    "kr_hint": "바로 그게 ~예요 / 그게 ~한 이유입니다",
+    "section": 29
+  },
+  {
+    "english": "That’s why I left so early.",
+    "korean": "그게 내가 엄청 일찍 떠났던 이유야.",
+    "en_hint": "That’s + what/why + 주어 + 동사",
+    "kr_hint": "바로 그게 ~예요 / 그게 ~한 이유입니다",
     "section": 29
   },
   {
     "english": "That’s why I asked you.",
-    "korean": "그게 내가 너에게 물어본 이유야.",
-    "en_hint": "That’s + what/why/who + 주어 + 동사",
-    "kr_hint": "~것/이유/사람이에요",
+    "korean": "그래서 너한테 물어봤던 거야.",
+    "en_hint": "That’s + what/why + 주어 + 동사",
+    "kr_hint": "바로 그게 ~예요 / 그게 ~한 이유입니다",
     "section": 29
   },
   {
     "english": "Have you ever done Pilates?",
     "korean": "필라테스를 해 본 적 있나요?",
     "en_hint": "Have you ever + 과거분사?",
-    "kr_hint": "…해 본 적 있나요?",
+    "kr_hint": "~해 본 적 있나요?",
     "section": 30
   },
   {
     "english": "Have you ever thought about this?",
-    "korean": "이거 생각해 본 적 있나요?",
+    "korean": "이것에 대해 생각해 본 적 있나요?",
     "en_hint": "Have you ever + 과거분사?",
-    "kr_hint": "…해 본 적 있나요?",
+    "kr_hint": "~해 본 적 있나요?",
     "section": 30
   },
   {
     "english": "Have you ever started talking to a stranger?",
-    "korean": "낯선 사람에게 말 걸어 본 적 있나요?",
+    "korean": "모르는 사람에게 말 걸어본 적 있나요?",
     "en_hint": "Have you ever + 과거분사?",
-    "kr_hint": "…해 본 적 있나요?",
+    "kr_hint": "~해 본 적 있나요?",
     "section": 30
   },
   {
-    "english": "Have you ever seen that movie?",
-    "korean": "그 영화 본 적 있나요?",
+    "english": "Have you ever watched that movie?",
+    "korean": "그 영화 본 적 있어요?",
     "en_hint": "Have you ever + 과거분사?",
-    "kr_hint": "…해 본 적 있나요?",
+    "kr_hint": "~해 본 적 있나요?",
     "section": 30
   },
   {
-    "english": "Have you ever been fooled?",
-    "korean": "속은 적 있나요?",
+    "english": "Have you ever been dumped?",
+    "korean": "차여 본 적 있나요?",
     "en_hint": "Have you ever + 과거분사?",
-    "kr_hint": "…해 본 적 있나요?",
+    "kr_hint": "~해 본 적 있나요?",
     "section": 30
   },
   {
-    "english": "Have you ever been to the US?",
+    "english": "Have you ever loved me?",
+    "korean": "나를 사랑한 적 있나요?",
+    "en_hint": "Have you ever + 과거분사?",
+    "kr_hint": "~해 본 적 있나요?",
+    "section": 30
+  },
+  {
+    "english": "Have you ever been to the U.S.?",
     "korean": "미국에 가 본 적 있나요?",
     "en_hint": "Have you ever + 과거분사?",
-    "kr_hint": "…해 본 적 있나요?",
+    "kr_hint": "~해 본 적 있나요?",
     "section": 30
   },
   {
     "english": "Have you ever suffered from jet lag?",
     "korean": "시차 때문에 고생해 본 적 있나요?",
     "en_hint": "Have you ever + 과거분사?",
-    "kr_hint": "…해 본 적 있나요?",
+    "kr_hint": "~해 본 적 있나요?",
     "section": 30
   },
   {
     "english": "Have you ever tried Irish food?",
-    "korean": "아일랜드 음식 먹어 본 적 있나요?",
+    "korean": "아일랜드 음식을 먹어본 적 있나요?",
     "en_hint": "Have you ever + 과거분사?",
-    "kr_hint": "…해 본 적 있나요?",
+    "kr_hint": "~해 본 적 있나요?",
     "section": 30
   },
   {
     "english": "Have you ever heard anything from her?",
-    "korean": "그녀에게 무슨 소식이라도 들어 본 적 있나요?",
+    "korean": "그녀에게 무슨 소식이라도 들은 적 있나요?",
     "en_hint": "Have you ever + 과거분사?",
-    "kr_hint": "…해 본 적 있나요?",
+    "kr_hint": "~해 본 적 있나요?",
     "section": 30
   },
   {

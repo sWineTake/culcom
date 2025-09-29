@@ -447,7 +447,6 @@
 
 .speech-result.listening-indicator {
   color: #4caf50;
-  animation: listeningPulse 1.5s infinite;
 }
 
 .speech-result.placeholder {
