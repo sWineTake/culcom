@@ -47,7 +47,7 @@ function App() {
     const randomIndex = Math.floor(Math.random() * availableWords.length);
     const word = availableWords[randomIndex];
     const wordIndex = wordsData.indexOf(word);
-    
+
     const showKoreanFirst = true;
 
     setCurrentWord(word);
@@ -90,6 +90,23 @@ function App() {
       recognitionRef.current.stop();
     }
   }, []);
+
+  const restartCurrentSection = useCallback(() => {
+    if (selectedSection) {
+      const filteredWords = selectedSection === 'all' ? wordsData : wordsData.filter(word => word.section === selectedSection);
+      setUsedWords([]);
+      setIsCompleted(false);
+      setCurrentWord(null);
+      setShowAnswer(false);
+      setSpeechInput('');
+      setIsListening(false);
+      setCurrentScore(0);
+      setMaxScore(filteredWords.length);
+      if (recognitionRef.current) {
+        recognitionRef.current.stop();
+      }
+    }
+  }, [selectedSection]);
 
 
   const handleKeyDown = useCallback((e) => {
@@ -145,9 +162,9 @@ function App() {
   const calculateSimilarity = useCallback((str1, str2) => {
     const longer = str1.length > str2.length ? str1 : str2;
     const shorter = str1.length > str2.length ? str2 : str1;
-    
+
     if (longer.length === 0) return 1.0;
-    
+
     const distance = levenshteinDistance(longer, shorter);
     return (longer.length - distance) / longer.length;
   }, []);
@@ -162,20 +179,20 @@ function App() {
 
     const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
     const recognition = new SpeechRecognition();
-    
+
     recognition.continuous = true;
     recognition.interimResults = true;
     recognition.lang = showKorean ? 'en-US' : 'ko-KR';
     recognition.maxAlternatives = 1;
-    
+
     recognition.onstart = () => {
       setIsListening(true);
     };
-    
+
     recognition.onresult = (event) => {
       let finalTranscript = '';
       let interimTranscript = '';
-      
+
       for (let i = event.resultIndex; i < event.results.length; i++) {
         const transcript = event.results[i][0].transcript;
         if (event.results[i].isFinal) {
@@ -184,7 +201,7 @@ function App() {
           interimTranscript += transcript;
         }
       }
-      
+
       // 기존 speechInput과 새로운 결과를 누적
       setSpeechInput(prev => {
         const newInput = finalTranscript + interimTranscript;
@@ -198,31 +215,31 @@ function App() {
         }
       });
     };
-    
+
     recognition.onerror = (event) => {
       console.error('음성인식 오류:', event.error);
       setIsListening(false);
     };
-    
+
     recognition.onend = () => {
       setIsListening(false);
     };
-    
+
     recognitionRef.current = recognition;
   }, [showKorean, currentWord, getNextWord, calculateSimilarity]);
 
 
   const levenshteinDistance = (str1, str2) => {
     const matrix = [];
-    
+
     for (let i = 0; i <= str2.length; i++) {
       matrix[i] = [i];
     }
-    
+
     for (let j = 0; j <= str1.length; j++) {
       matrix[0][j] = j;
     }
-    
+
     for (let i = 1; i <= str2.length; i++) {
       for (let j = 1; j <= str1.length; j++) {
         if (str2.charAt(i - 1) === str1.charAt(j - 1)) {
@@ -236,7 +253,7 @@ function App() {
         }
       }
     }
-    
+
     return matrix[str2.length][str1.length];
   };
 
@@ -335,7 +352,7 @@ function App() {
   const [popupIndex, setPopupIndex] = useState(-1);
   const [usedPreview, setUsedPreview] = useState(false); // 미리보기 사용 여부
   const [previewedWords, setPreviewedWords] = useState([]); // 미리보기한 단어들의 인덱스
-  
+
   // 힌트 팝업 상태 관리
   const [showHintPopup, setShowHintPopup] = useState(false);
 
@@ -363,149 +380,166 @@ function App() {
   // 사용자가 말한 단어들 중에서 정답과 일치하는 것들만 찾아서 반환
   const findMatchedWords = useCallback((speechText, correctAnswer) => {
     if (!correctAnswer) return [];
-    
+
     const speechWords = speechText ? speechText.toLowerCase().split(/\s+/).filter(word => word.length > 0) : [];
     const originalWords = correctAnswer.split(/\s+/);
     const matchedWords = [];
-    
+    const usedSpeechWords = new Set(); // 이미 사용된 speechWord를 추적
+
     // 각 원본 단어에 대해 매칭 확인
     originalWords.forEach((originalWord, originalIndex) => {
       const cleanOriginalWord = originalWord.replace(/[.,!?;"']/g, '').toLowerCase();
-      
+
       // 자동으로 보여지는 단어들은 자동으로 매칭된 것으로 처리
       if (shouldAutoReveal(originalWord)) {
-        matchedWords.push({ 
-          word: cleanOriginalWord, 
+        matchedWords.push({
+          word: cleanOriginalWord,
           original: originalWord,
           originalWord: cleanOriginalWord,
           originalIndex: originalIndex
         });
         return;
       }
-      
-      // 사용자가 말한 각 단어와 비교
-      speechWords.forEach(speechWord => {
+
+      // 사용자가 말한 각 단어와 비교 (아직 사용되지 않은 단어만)
+      for (let i = 0; i < speechWords.length; i++) {
+        if (usedSpeechWords.has(i)) continue; // 이미 사용된 단어는 건너뛰기
+
+        const speechWord = speechWords[i];
         const cleanSpeech = speechWord.replace(/[.,!?;"']/g, '');
-        
+        let matched = false;
+
         // 1. 직접 일치 확인
         if (cleanSpeech === cleanOriginalWord) {
           if (!matchedWords.some(m => m.originalIndex === originalIndex)) {
-            matchedWords.push({ 
-              word: cleanOriginalWord, 
+            matchedWords.push({
+              word: cleanOriginalWord,
               original: originalWord,
               originalWord: cleanOriginalWord,
               originalIndex: originalIndex
             });
+            usedSpeechWords.add(i); // 사용된 speechWord 표시
+            matched = true;
           }
-          return;
         }
-        
+
         // 2. 약어 확장해서 비교
-        if (contractionMap[cleanOriginalWord]) {
+        if (!matched && contractionMap[cleanOriginalWord]) {
           const expandedWords = contractionMap[cleanOriginalWord];
           if (expandedWords.includes(cleanSpeech)) {
             if (!matchedWords.some(m => m.originalIndex === originalIndex)) {
-              matchedWords.push({ 
-                word: cleanSpeech, 
+              matchedWords.push({
+                word: cleanSpeech,
                 original: originalWord,
                 originalWord: cleanOriginalWord,
                 originalIndex: originalIndex
               });
+              usedSpeechWords.add(i);
+              matched = true;
             }
-            return;
           }
         }
-        
+
         // 3. 역방향: 사용자가 약어를 말했을 때
-        if (contractionMap[cleanSpeech]) {
+        if (!matched && contractionMap[cleanSpeech]) {
           const expandedWords = contractionMap[cleanSpeech];
           if (expandedWords.includes(cleanOriginalWord)) {
             if (!matchedWords.some(m => m.originalIndex === originalIndex)) {
-              matchedWords.push({ 
-                word: cleanOriginalWord, 
+              matchedWords.push({
+                word: cleanOriginalWord,
                 original: originalWord,
                 originalWord: cleanOriginalWord,
                 originalIndex: originalIndex
               });
+              usedSpeechWords.add(i);
+              matched = true;
             }
-            return;
           }
         }
 
         // 3.5. 숫자/시간 표현 매핑 확인
-        if (numberTimeMap[cleanOriginalWord]) {
+        if (!matched && numberTimeMap[cleanOriginalWord]) {
           const koreanPronunciations = numberTimeMap[cleanOriginalWord];
           // 사용자가 말한 내용이 한국식 발음 중 하나와 일치하는지 확인
-          if (koreanPronunciations.some(pronunciation => 
-            cleanSpeech.includes(pronunciation.replace(/\s+/g, '')) || 
+          if (koreanPronunciations.some(pronunciation =>
+            cleanSpeech.includes(pronunciation.replace(/\s+/g, '')) ||
             pronunciation.replace(/\s+/g, '').includes(cleanSpeech) ||
             cleanSpeech === pronunciation ||
             calculateSimilarity(cleanSpeech, pronunciation.replace(/\s+/g, '')) >= 0.7
           )) {
             if (!matchedWords.some(m => m.originalIndex === originalIndex)) {
-              matchedWords.push({ 
-                word: cleanOriginalWord, 
+              matchedWords.push({
+                word: cleanOriginalWord,
                 original: originalWord,
                 originalWord: cleanOriginalWord,
                 originalIndex: originalIndex
               });
+              usedSpeechWords.add(i);
+              matched = true;
             }
-            return;
           }
         }
 
         // 3.7. 한글-영어 알파벳 매핑 확인
-        if (koreanToEnglishMap[cleanOriginalWord]) {
+        if (!matched && koreanToEnglishMap[cleanOriginalWord]) {
           const koreanPronunciations = koreanToEnglishMap[cleanOriginalWord];
           // 사용자가 말한 내용이 한국어 발음 중 하나와 일치하는지 확인
-          if (koreanPronunciations.some(pronunciation => 
+          if (koreanPronunciations.some(pronunciation =>
             cleanSpeech === pronunciation ||
             calculateSimilarity(cleanSpeech, pronunciation) >= 0.8
           )) {
             if (!matchedWords.some(m => m.originalIndex === originalIndex)) {
-              matchedWords.push({ 
-                word: cleanOriginalWord, 
+              matchedWords.push({
+                word: cleanOriginalWord,
                 original: originalWord,
                 originalWord: cleanOriginalWord,
                 originalIndex: originalIndex
               });
+              usedSpeechWords.add(i);
+              matched = true;
             }
-            return;
           }
         }
-        
+
         // 4. 유사도 기준을 완화하여 한국인 발음 특성 고려
-        if (cleanOriginalWord.length >= 3 && cleanSpeech.length >= 3) {
+        if (!matched && cleanOriginalWord.length >= 3 && cleanSpeech.length >= 3) {
           const similarity = calculateSimilarity(cleanSpeech, cleanOriginalWord);
           if (similarity >= longWordThreshold) {
             if (!matchedWords.some(m => m.originalIndex === originalIndex)) {
-              matchedWords.push({ 
-                word: cleanOriginalWord, 
+              matchedWords.push({
+                word: cleanOriginalWord,
                 original: originalWord,
                 originalWord: cleanOriginalWord,
                 originalIndex: originalIndex
               });
+              usedSpeechWords.add(i);
+              matched = true;
             }
           }
         }
-        
+
         // 5. 짧은 단어 (1-2글자)에 대한 특별 처리 - 한국인 발음 고려
-        if (cleanOriginalWord.length <= 2) {
+        if (!matched && cleanOriginalWord.length <= 2) {
           const similarity = calculateSimilarity(cleanSpeech, cleanOriginalWord);
           if (similarity >= shortWordThreshold) { // 짧은 단어는 더 관대한 기준 적용
             if (!matchedWords.some(m => m.originalIndex === originalIndex)) {
-              matchedWords.push({ 
-                word: cleanOriginalWord, 
+              matchedWords.push({
+                word: cleanOriginalWord,
                 original: originalWord,
                 originalWord: cleanOriginalWord,
                 originalIndex: originalIndex
               });
+              usedSpeechWords.add(i);
+              matched = true;
             }
           }
         }
-      });
+
+        // 매칭되었으면 다음 originalWord로 넘어가기
+        if (matched) break;
+      }
     });
-    
+
     return matchedWords;
   }, [calculateSimilarity, shortWordThreshold, longWordThreshold]);
 
@@ -515,43 +549,43 @@ function App() {
       // 대문자를 소문자로 변환하여 자연스러운 발음
       const cleanWord = word.replace(/[.,!?;"']/g, '').toLowerCase();
       const utterance = new SpeechSynthesisUtterance(cleanWord);
-      
+
       // 미국식 발음을 위한 설정
       utterance.lang = 'en-US';
       utterance.rate = 0.7; // 조금 더 천천히
       utterance.pitch = 1.0;
       utterance.volume = 1.0;
-      
+
       // 사용 가능한 음성 중에서 미국식 영어 음성을 찾아서 설정
       const voices = speechSynthesis.getVoices();
       const preferredVoices = [
         'Microsoft David - English (United States)',
-        'Microsoft Mark - English (United States)', 
+        'Microsoft Mark - English (United States)',
         'Microsoft Zira - English (United States)',
         'Google US English',
         'Alex',
         'Samantha'
       ];
-      
+
       // 선호하는 음성 순서대로 찾기
       let selectedVoice = null;
       for (const preferredName of preferredVoices) {
-        selectedVoice = voices.find(voice => 
-          voice.name.includes(preferredName) || 
+        selectedVoice = voices.find(voice =>
+          voice.name.includes(preferredName) ||
           (voice.lang === 'en-US' && voice.name.toLowerCase().includes(preferredName.toLowerCase()))
         );
         if (selectedVoice) break;
       }
-      
+
       // 선호하는 음성이 없으면 en-US 중에서 첫 번째 선택
       if (!selectedVoice) {
         selectedVoice = voices.find(voice => voice.lang === 'en-US');
       }
-      
+
       if (selectedVoice) {
         utterance.voice = selectedVoice;
       }
-      
+
       speechSynthesis.speak(utterance);
     }
   }, []);
@@ -576,17 +610,17 @@ function App() {
 
   const renderAnswerWithBlanks = () => {
     if (!currentWord) return null;
-    
+
     const correctAnswer = showKorean ? currentWord.english : currentWord.korean;
     const correctWords = correctAnswer.split(' ');
-    
+
     // 정답 확인 후에는 전체 문장 표시
     if (showAnswer) {
       return (
         <div className="answer-blanks-container">
           {correctWords.map((word, index) => (
-            <span 
-              key={index} 
+            <span
+              key={index}
               className="answer-word revealed"
             >
               {word}
@@ -595,28 +629,28 @@ function App() {
         </div>
       );
     }
-    
+
     // 사용자가 말한 단어 중 정답과 일치하는 것들을 정답 순서대로 정렬하여 표시
     const matchedWords = findMatchedWords(speechInput, correctAnswer);
-    
+
     return (
       <div className="answer-blanks-container">
         {correctWords.map((correctWord, index) => {
           const cleanCorrectWord = correctWord.replace(/[.,!?;"']/g, '').toLowerCase();
-          
+
           // 원본 단어를 기준으로 매칭된 단어 찾기
           let matchedWord = matchedWords.find(m => m.originalWord === cleanCorrectWord);
-          
+
           // 약어 처리: 원본 단어가 약어인 경우 풀어쓰기 단어들과도 매칭
           if (!matchedWord && contractionMap[cleanCorrectWord]) {
             const expandedWords = contractionMap[cleanCorrectWord];
             matchedWord = matchedWords.find(m => expandedWords.includes(m.word));
           }
-          
+
           if (matchedWord) {
             return (
-              <span 
-                key={index} 
+              <span
+                key={index}
                 className="answer-word matched"
               >
                 {correctWord}
@@ -625,8 +659,8 @@ function App() {
           } else if (shouldAutoReveal(correctWord)) {
             // 숫자, 금액, 시간 등은 자동으로 보여주기
             return (
-              <span 
-                key={index} 
+              <span
+                key={index}
                 className="answer-word auto-revealed"
                 onClick={() => speakWord(correctWord)}
                 title="클릭하면 발음을 들을 수 있습니다"
@@ -637,8 +671,8 @@ function App() {
           } else if (previewedWords.includes(index)) {
             // 미리보기한 단어는 정답으로 표시 (미리보기 사용으로 인한 틀림 표시)
             return (
-              <span 
-                key={index} 
+              <span
+                key={index}
                 className="answer-word previewed"
                 onClick={() => speakWord(correctWord)}
                 title="미리보기로 확인한 단어입니다"
@@ -648,8 +682,8 @@ function App() {
             );
           } else {
             return (
-              <span 
-                key={index} 
+              <span
+                key={index}
                 className="answer-word blank clickable"
                 onClick={() => openPopup(correctWord, index)}
                 title="클릭하면 답을 확인할 수 있습니다"
@@ -670,7 +704,7 @@ function App() {
       const loadVoices = () => {
         speechSynthesis.getVoices();
       };
-      
+
       if (speechSynthesis.onvoiceschanged !== undefined) {
         speechSynthesis.onvoiceschanged = loadVoices;
       }
@@ -707,14 +741,14 @@ function App() {
   // 모든 단어를 맞췄을 때 자동으로 다음 문제로 넘어가기
   useEffect(() => {
     if (!currentWord || showAnswer) return;
-    
+
     const correctAnswer = showKorean ? currentWord.english : currentWord.korean;
     const words = correctAnswer.split(' ');
     const matchedWords = findMatchedWords(speechInput, correctAnswer);
-    
+
     // 모든 단어가 맞았는지 확인
     const allWordsMatched = words.length > 0 && matchedWords.length === words.length;
-    
+
     if (allWordsMatched) {
       // 미리보기를 사용하지 않은 경우에만 점수 증가
       if (!usedPreview) {
@@ -738,7 +772,7 @@ function App() {
           <div className="section-select-screen">
             <h1>Study</h1>
             <h2>학습할 섹션을 선택하세요</h2>
-            
+
             <div className="similarity-settings">
               <h3>음성인식 유사도 설정</h3>
               <div className="similarity-controls">
@@ -766,7 +800,7 @@ function App() {
                 </div>
               </div>
             </div>
-            
+
             <div className="section-buttons">
               {getAvailableSections().map(sectionNumber => (
                 <button
@@ -822,8 +856,15 @@ function App() {
                       ({Math.round((currentScore / maxScore) * 100)}%)
                     </div>
                   </div>
-                  <p>총 {getCurrentProgress().total}개의 단어를 학습했습니다.</p>
-                  <p>R키를 눌러 섹션 선택으로 돌아가세요.</p>
+                  <p>총 {getCurrentProgress().total}개의 단어를 완료했습니다.</p>
+                  <div className="completion-buttons">
+                    <button
+                      className="restart-section-button"
+                      onClick={restartCurrentSection}
+                    >
+                      현재 섹션 다시 풀기
+                    </button>
+                  </div>
                 </div>
               </div>
             ) : (
@@ -893,7 +934,7 @@ function App() {
                     <p>
                       {isMobileDevice() && !userStartedSpeech
                         ? '🎤 위의 "음성인식 시작" 버튼을 눌러 음성인식을 시작하세요'
-                        : '🎤 음성인식이 자동으로 시작됩니다. 답을 말하거나 스페이스바를 눌러 정답 확인'
+                        : '🎤 음성 인식 중 입니다.'
                       }
                     </p>
                   ) : (
@@ -911,7 +952,7 @@ function App() {
             )}
           </>
         )}
-        
+
         {/* 정답 미리보기 팝업 */}
         {showPopup && (
           <div className="popup-overlay" onClick={closePopup}>
@@ -923,7 +964,7 @@ function App() {
               <div className="popup-body">
                 <div className="popup-word">{popupWord}</div>
                 <div className="popup-actions">
-                  <button 
+                  <button
                     className="speak-button"
                     onClick={() => speakWord(popupWord)}
                   >
