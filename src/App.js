@@ -3,7 +3,6 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import './App.css';
 import wordsData from './words.json';
-import PWAInstallButton from './components/PWAInstallButton';
 
 function App() {
   const [currentWord, setCurrentWord] = useState(null);
@@ -24,6 +23,7 @@ function App() {
   const [maxScore, setMaxScore] = useState(0); // 최대 점수 (총 문제 수)
   const [speechSupported, setSpeechSupported] = useState(true); // 음성인식 지원 여부
   const [userStartedSpeech, setUserStartedSpeech] = useState(false); // 사용자가 수동으로 음성인식 시작했는지
+  const [showSettings, setShowSettings] = useState(false); // 설정 화면 표시 여부
 
   const getFilteredWords = useCallback(() => {
     if (selectedSection === 'all') {
@@ -766,40 +766,71 @@ function App() {
 
   return (
     <div className="App">
-      <PWAInstallButton />
       <header className="App-header">
-        {showSectionSelect ? (
-          <div className="section-select-screen">
-            <h1>Study</h1>
-            <h2>학습할 섹션을 선택하세요</h2>
+{showSettings ? (
+          <div className="settings-screen">
+            <div className="settings-header">
+              <h1>설정</h1>
+              <button
+                className="back-to-main-button"
+                onClick={() => setShowSettings(false)}
+              >
+                ← 뒤로가기
+              </button>
+            </div>
 
-            <div className="similarity-settings">
-              <h3>음성인식 유사도 설정</h3>
-              <div className="similarity-controls">
-                <div className="similarity-control">
-                  <label>1-2글자 단어 유사도: {Math.round(shortWordThreshold * 100)}%</label>
-                  <input
-                    type="range"
-                    min="0.2"
-                    max="0.8"
-                    step="0.05"
-                    value={shortWordThreshold}
-                    onChange={(e) => setShortWordThreshold(parseFloat(e.target.value))}
-                  />
+            <div className="settings-content">
+              <div className="similarity-settings">
+                <h3>음성인식 유사도 설정</h3>
+                <div className="similarity-controls">
+                  <div className="similarity-control">
+                    <label>1-2글자 단어 유사도: {Math.round(shortWordThreshold * 100)}%</label>
+                    <input
+                      type="range"
+                      min="0.2"
+                      max="0.8"
+                      step="0.05"
+                      value={shortWordThreshold}
+                      onChange={(e) => setShortWordThreshold(parseFloat(e.target.value))}
+                    />
+                  </div>
+                  <div className="similarity-control">
+                    <label>3글자 이상 단어 유사도: {Math.round(longWordThreshold * 100)}%</label>
+                    <input
+                      type="range"
+                      min="0.4"
+                      max="0.9"
+                      step="0.05"
+                      value={longWordThreshold}
+                      onChange={(e) => setLongWordThreshold(parseFloat(e.target.value))}
+                    />
+                  </div>
                 </div>
-                <div className="similarity-control">
-                  <label>3글자 이상 단어 유사도: {Math.round(longWordThreshold * 100)}%</label>
-                  <input
-                    type="range"
-                    min="0.4"
-                    max="0.9"
-                    step="0.05"
-                    value={longWordThreshold}
-                    onChange={(e) => setLongWordThreshold(parseFloat(e.target.value))}
+              </div>
+
+              <div className="signature-section">
+                <div className="signature-container">
+                  <img
+                    src="/image/sign.png"
+                    alt="Eden Signature"
+                    className="signature-image"
                   />
                 </div>
               </div>
             </div>
+          </div>
+        ) : showSectionSelect ? (
+          <div className="section-select-screen">
+            <div className="main-header">
+              <h1>Study</h1>
+              <button
+                className="settings-button"
+                onClick={() => setShowSettings(true)}
+              >
+                ⚙️ 설정
+              </button>
+            </div>
+            <h2>학습할 섹션을 선택하세요</h2>
 
             <div className="section-buttons">
               {getAvailableSections().map(sectionNumber => (

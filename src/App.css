@@ -1363,3 +1363,252 @@
     padding: 15px;
   }
 }
+
+/* 설정 화면 스타일 */
+.settings-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+  padding: 20px 0;
+  box-sizing: border-box;
+  min-height: 100vh;
+}
+
+.settings-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 600px;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.settings-header h1 {
+  color: #61dafb;
+  font-size: 2rem;
+  margin: 0;
+  text-align: center;
+  font-family: 'SF Pro Display', 'Segoe UI', 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.back-to-main-button {
+  position: absolute;
+  right: 0;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #666;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.back-to-main-button:hover {
+  background-color: #888;
+  transform: translateY(-2px);
+}
+
+.settings-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+  max-width: 600px;
+  padding: 0 20px;
+}
+
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 600px;
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.main-header h1 {
+  color: #61dafb;
+  font-size: 2rem;
+  margin: 0;
+  text-align: center;
+  font-family: 'SF Pro Display', 'Segoe UI', 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.settings-button {
+  position: absolute;
+  right: 0;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #61dafb;
+  color: #282c34;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.settings-button:hover {
+  background-color: #4fa8c5;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(97, 218, 251, 0.3);
+}
+
+/* 서명 섹션 스타일 */
+.signature-section {
+  width: 100%;
+  padding: 30px;
+  background: linear-gradient(145deg, #3a3f4a, #2d3441);
+  border-radius: 16px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(97, 218, 251, 0.3);
+  text-align: center;
+}
+
+.signature-section h3 {
+  color: #61dafb;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+  font-family: 'SF Pro Display', 'Segoe UI', 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.signature-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.signature-image {
+  width: 150px;
+  height: auto;
+  border-radius: 12px;
+  background-color: white;
+  padding: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  border: 2px solid rgba(97, 218, 251, 0.2);
+}
+
+.signature-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  border-color: rgba(97, 218, 251, 0.5);
+}
+
+.developer-info {
+  color: #e2e8f0;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 0;
+  font-family: 'SF Pro Text', 'Segoe UI', 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
+  letter-spacing: -0.01em;
+}
+
+/* 설정 화면 모바일 최적화 */
+@media (max-width: 768px) {
+  .settings-screen {
+    padding: 15px;
+  }
+
+  .settings-header {
+    margin-bottom: 25px;
+  }
+
+  .settings-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .back-to-main-button {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+
+  .settings-content {
+    gap: 30px;
+    padding: 0 15px;
+  }
+
+  .main-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .settings-button {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+
+  .signature-section {
+    padding: 25px 20px;
+  }
+
+  .signature-section h3 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+
+  .signature-image {
+    width: 120px;
+    padding: 12px;
+  }
+
+  .developer-info {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .settings-screen {
+    padding: 10px;
+  }
+
+  .settings-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .back-to-main-button {
+    padding: 6px 10px;
+    font-size: 0.85rem;
+  }
+
+  .main-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .settings-button {
+    padding: 6px 10px;
+    font-size: 0.85rem;
+  }
+
+  .signature-section {
+    padding: 20px 15px;
+  }
+
+  .signature-section h3 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+  }
+
+  .signature-image {
+    width: 100px;
+    padding: 10px;
+  }
+
+  .developer-info {
+    font-size: 0.95rem;
+  }
+}
