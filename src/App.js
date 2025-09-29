@@ -209,7 +209,7 @@ function App() {
       // 모바일 최적화 설정
       const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
-      recognition.continuous = false; // 모든 환경에서 false로 통일
+      recognition.continuous = true; // 연속 인식으로 변경하여 속도 향상
       recognition.interimResults = true;
       recognition.lang = showKorean ? 'en-US' : 'ko-KR';
       recognition.maxAlternatives = 1;
@@ -260,9 +260,9 @@ function App() {
     recognition.onend = () => {
       setIsListening(false);
 
-      // 모바일에서는 자동으로 다시 시작 (continuous=false이므로)
-      const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-      if (isMobile && userStartedSpeech && currentWord && !showAnswer) {
+      // continuous=true이므로 자동 재시작은 브라우저가 처리
+      // 필요시에만 수동으로 재시작
+      if (currentWord && !showAnswer) {
         setTimeout(() => {
           if (!isListening && recognitionRef.current) {
             try {
@@ -271,7 +271,7 @@ function App() {
               console.log('자동 재시작 실패:', error);
             }
           }
-        }, 300);
+        }, 100);
       }
     };
 
