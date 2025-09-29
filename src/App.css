@@ -342,7 +342,7 @@
 
 .section-buttons {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   width: 100%;
   max-width: 600px;
@@ -612,7 +612,7 @@
   }
   
   .section-buttons {
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     max-width: 700px;
   }
   
@@ -684,7 +684,7 @@
   }
 
   .section-buttons {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 15px;
     padding: 0 15px;
     max-width: 450px;
@@ -844,7 +844,7 @@
   }
 
   .section-buttons {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     padding: 0 10px;
     gap: 12px;
     max-width: 400px;
@@ -958,7 +958,7 @@
   }
 
   .section-buttons {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     padding: 0 8px;
     gap: 10px;
     max-width: 350px;

@@ -1,10 +1,641 @@
-[ {
+[
+  {
+    "english": "Can you help me?",
+    "korean": "나 좀 도와줄래요?",
+    "en_hint": "Can you + 동사?",
+    "kr_hint": "~할 수 있어요?",
+    "section": 1
+  },
+  {
+    "english": "Can you speak English?",
+    "korean": "영어 할 줄 아세요?",
+    "en_hint": "Can you + 동사?",
+    "kr_hint": "~할 수 있어요?",
+    "section": 1
+  },
+  {
+    "english": "Can you buy it for me?",
+    "korean": "그것을 나를 위해 사줄 수 있나요?",
+    "en_hint": "Can you + 동사?",
+    "kr_hint": "~할 수 있어요?",
+    "section": 1
+  },
+  {
+    "english": "Can you hear me?",
+    "korean": "내 말이 들리나요?",
+    "en_hint": "Can you + 동사?",
+    "kr_hint": "~할 수 있어요?",
+    "section": 1
+  },
+  {
+    "english": "Can you come by 3pm?",
+    "korean": "3시까지 올 수 있어요?",
+    "en_hint": "Can you + 동사?",
+    "kr_hint": "~할 수 있어요?",
+    "section": 1
+  },
+  {
+    "english": "Can you call him?",
+    "korean": "그에게 전화해 줄래요?",
+    "en_hint": "Can you + 동사?",
+    "kr_hint": "~할 수 있어요?",
+    "section": 1
+  },
+  {
+    "english": "Can you recommend me one?",
+    "korean": "하나 추천해 주시겠어요?",
+    "en_hint": "Can you + 동사?",
+    "kr_hint": "~할 수 있어요?",
+    "section": 1
+  },
+  {
+    "english": "Can you pass me the pen?",
+    "korean": "펜 좀 건네주시겠어요?",
+    "en_hint": "Can you + 동사?",
+    "kr_hint": "~할 수 있어요?",
+    "section": 1
+  },
+  {
+    "english": "Can you cook?",
+    "korean": "요리할 수 있나요?",
+    "en_hint": "Can you + 동사?",
+    "kr_hint": "~할 수 있어요?",
+    "section": 1
+  },
+  {
+    "english": "Can you teach me English?",
+    "korean": "나에게 영어를 가르쳐 줄 수 있나요?",
+    "en_hint": "Can you + 동사?",
+    "kr_hint": "~할 수 있어요?",
+    "section": 1
+  },
+  {
+    "english": "I’d like to meet her.",
+    "korean": "그녀를 좀 만나고 싶습니다.",
+    "en_hint": "I’d like to + 동사 (I would)",
+    "kr_hint": "~하고 싶어요",
+    "section": 2
+  },
+  {
+    "english": "I’d like to buy one.",
+    "korean": "하나 사고 싶습니다.",
+    "en_hint": "I’d like to + 동사 (I would)",
+    "kr_hint": "~하고 싶어요",
+    "section": 2
+  },
+  {
+    "english": "I’d like to pay now.",
+    "korean": "지금 결제 좀 하고 싶습니다.",
+    "en_hint": "I’d like to + 동사 (I would)",
+    "kr_hint": "~하고 싶어요",
+    "section": 2
+  },
+  {
+    "english": "I’d like to order a hamburger.",
+    "korean": "햄버거를 주문하고 싶습니다.",
+    "en_hint": "I’d like to + 동사 (I would)",
+    "kr_hint": "~하고 싶어요",
+    "section": 2
+  },
+  {
+    "english": "I’d like to talk to them.",
+    "korean": "그들과 이야기하고 싶습니다.",
+    "en_hint": "I’d like to + 동사 (I would)",
+    "kr_hint": "~하고 싶어요",
+    "section": 2
+  },
+  {
+    "english": "I’d like to see the menu.",
+    "korean": "메뉴를 보고 싶습니다.",
+    "en_hint": "I’d like to + 동사 (I would)",
+    "kr_hint": "~하고 싶어요",
+    "section": 2
+  },
+  {
+    "english": "I’d like to try it on.",
+    "korean": "그거 한번 입어 보고 싶어요.",
+    "en_hint": "I’d like to + 동사 (I would)",
+    "kr_hint": "~하고 싶어요",
+    "section": 2
+  },
+  {
+    "english": "I’d like to answer the question.",
+    "korean": "질문에 답하고 싶습니다.",
+    "en_hint": "I’d like to + 동사 (I would)",
+    "kr_hint": "~하고 싶어요",
+    "section": 2
+  },
+  {
+    "english": "I’d like to go shopping.",
+    "korean": "쇼핑하러 가고 싶습니다.",
+    "en_hint": "I’d like to + 동사 (I would)",
+    "kr_hint": "~하고 싶어요",
+    "section": 2
+  },
+  {
+    "english": "I’d like to watch a movie with my friend.",
+    "korean": "친구와 함께 영화 한 편 보고 싶어요.",
+    "en_hint": "I’d like to + 동사 (I would)",
+    "kr_hint": "~하고 싶어요",
+    "section": 2
+  },
+  {
+    "english": "I think this is too spicy for me.",
+    "korean": "이건 내게 너무 매운 것 같아.",
+    "en_hint": "I think 주어+동사 / I don’t think 주어+동사",
+    "kr_hint": "내 생각에 ~인 것 같아요 / …라고 생각하지 않아요",
+    "section": 3
+  },
+  {
+    "english": "I think I need a haircut.",
+    "korean": "나 머리 좀 잘라야 할 것 같아.",
+    "en_hint": "I think 주어+동사 / I don’t think 주어+동사",
+    "kr_hint": "내 생각에 ~인 것 같아요 / …라고 생각하지 않아요",
+    "section": 3
+  },
+  {
+    "english": "I think their online service is very fast.",
+    "korean": "그들의 온라인 서비스는 정말 빨라.",
+    "en_hint": "I think 주어+동사 / I don’t think 주어+동사",
+    "kr_hint": "내 생각에 ~인 것 같아요 / …라고 생각하지 않아요",
+    "section": 3
+  },
+  {
+    "english": "I think time really flies.",
+    "korean": "시간이 정말 빨리 날아가는 것 같아요.",
+    "en_hint": "I think 주어+동사 / I don’t think 주어+동사",
+    "kr_hint": "내 생각에 ~인 것 같아요 / …라고 생각하지 않아요",
+    "section": 3
+  },
+  {
+    "english": "I think you are a very nice person.",
+    "korean": "당신은 아주 좋은 사람이라고 생각해요.",
+    "en_hint": "I think 주어+동사 / I don’t think 주어+동사",
+    "kr_hint": "내 생각에 ~인 것 같아요 / …라고 생각하지 않아요",
+    "section": 3
+  },
+  {
+    "english": "I think you can do it.",
+    "korean": "나는 당신이 할 수 있다고 생각해요.",
+    "en_hint": "I think 주어+동사 / I don’t think 주어+동사",
+    "kr_hint": "내 생각에 ~인 것 같아요 / …라고 생각하지 않아요",
+    "section": 3
+  },
+  {
+    "english": "I don’t think this price is right.",
+    "korean": "이 가격이 맞는 것 같지 않아.",
+    "en_hint": "I think 주어+동사 / I don’t think 주어+동사",
+    "kr_hint": "내 생각에 ~인 것 같아요 / …라고 생각하지 않아요",
+    "section": 3
+  },
+  {
+    "english": "I don’t think the Wi-Fi is working.",
+    "korean": "와이파이가 작동하는 것 같지 않아.",
+    "en_hint": "I think 주어+동사 / I don’t think 주어+동사",
+    "kr_hint": "내 생각에 ~인 것 같아요 / …라고 생각하지 않아요",
+    "section": 3
+  },
+  {
+    "english": "I don’t think my mom likes my girlfriend.",
+    "korean": "엄마가 제 여자친구를 좋아하는 것 같지 않아요.",
+    "en_hint": "I think 주어+동사 / I don’t think 주어+동사",
+    "kr_hint": "내 생각에 ~인 것 같아요 / …라고 생각하지 않아요",
+    "section": 3
+  },
+  {
+    "english": "I don’t think I can fall asleep.",
+    "korean": "잠이 올 것 같지 않아요.",
+    "en_hint": "I think 주어+동사 / I don’t think 주어+동사",
+    "kr_hint": "내 생각에 ~인 것 같아요 / …라고 생각하지 않아요",
+    "section": 3
+  },
+  {
+    "english": "I didn’t do it.",
+    "korean": "내가 안 그랬어.",
+    "en_hint": "I didn’t + 동사 / I wasn’t + 형용사",
+    "kr_hint": "~ 안 했어요 / ~가 아니었어요",
+    "section": 4
+  },
+  {
+    "english": "I didn’t get my change.",
+    "korean": "잔돈을 안 받았어요.",
+    "en_hint": "I didn’t + 동사 / I wasn’t + 형용사",
+    "kr_hint": "~ 안 했어요 / ~가 아니었어요",
+    "section": 4
+  },
+  {
+    "english": "I didn’t give up.",
+    "korean": "난 포기하지 않았어요.",
+    "en_hint": "I didn’t + 동사 / I wasn’t + 형용사",
+    "kr_hint": "~ 안 했어요 / ~가 아니었어요",
+    "section": 4
+  },
+  {
+    "english": "I didn’t say that.",
+    "korean": "난 그렇게 말하지 않았어.",
+    "en_hint": "I didn’t + 동사 / I wasn’t + 형용사",
+    "kr_hint": "~ 안 했어요 / ~가 아니었어요",
+    "section": 4
+  },
+  {
+    "english": "I didn’t know you liked me.",
+    "korean": "네가 날 좋아하는지 몰랐어.",
+    "en_hint": "I didn’t + 동사 / I wasn’t + 형용사",
+    "kr_hint": "~ 안 했어요 / ~가 아니었어요",
+    "section": 4
+  },
+  {
+    "english": "I didn’t have dinner yet.",
+    "korean": "나 아직 저녁 안 먹었어.",
+    "en_hint": "I didn’t + 동사 / I wasn’t + 형용사",
+    "kr_hint": "~ 안 했어요 / ~가 아니었어요",
+    "section": 4
+  },
+  {
+    "english": "I didn’t do my homework yet.",
+    "korean": "나 아직 숙제 안 했어.",
+    "en_hint": "I didn’t + 동사 / I wasn’t + 형용사",
+    "kr_hint": "~ 안 했어요 / ~가 아니었어요",
+    "section": 4
+  },
+  {
+    "english": "I wasn’t brave.",
+    "korean": "난 용감하지 않았어.",
+    "en_hint": "I didn’t + 동사 / I wasn’t + 형용사",
+    "kr_hint": "~ 안 했어요 / ~가 아니었어요",
+    "section": 4
+  },
+  {
+    "english": "I wasn’t sleeping.",
+    "korean": "나 자는 중 아니었어.",
+    "en_hint": "I didn’t + 동사 / I wasn’t + 형용사",
+    "kr_hint": "~ 안 했어요 / ~가 아니었어요",
+    "section": 4
+  },
+  {
+    "english": "I wasn’t drunk at all.",
+    "korean": "나 전혀 취하지 않았어요.",
+    "en_hint": "I didn’t + 동사 / I wasn’t + 형용사",
+    "kr_hint": "~ 안 했어요 / ~가 아니었어요",
+    "section": 4
+  },
+  {
+    "english": "How about you?",
+    "korean": "당신은 어때요?",
+    "en_hint": "How about + 명사/동사ing",
+    "kr_hint": "~는/하는 것은 어때요?",
+    "section": 5
+  },
+  {
+    "english": "How about a movie tonight?",
+    "korean": "오늘 밤 영화 한 편 어때요?",
+    "en_hint": "How about + 명사/동사ing",
+    "kr_hint": "~는/하는 것은 어때요?",
+    "section": 5
+  },
+  {
+    "english": "How about some beer after studying?",
+    "korean": "스터디 후에 맥주 어때요?",
+    "en_hint": "How about + 명사/동사ing",
+    "kr_hint": "~는/하는 것은 어때요?",
+    "section": 5
+  },
+  {
+    "english": "How about going to a cafe together?",
+    "korean": "같이 카페로 가는 건 어때요?",
+    "en_hint": "How about + 명사/동사ing",
+    "kr_hint": "~는/하는 것은 어때요?",
+    "section": 5
+  },
+  {
+    "english": "How about meeting me tomorrow?",
+    "korean": "내일 나를 만나는 건 어때요?",
+    "en_hint": "How about + 명사/동사ing",
+    "kr_hint": "~는/하는 것은 어때요?",
+    "section": 5
+  },
+  {
+    "english": "How about doing it later?",
+    "korean": "나중에 하는 건 어때요?",
+    "en_hint": "How about + 명사/동사ing",
+    "kr_hint": "~는/하는 것은 어때요?",
+    "section": 5
+  },
+  {
+    "english": "How about coming here on Friday?",
+    "korean": "금요일에 여기로 오시는 건 어때요?",
+    "en_hint": "How about + 명사/동사ing",
+    "kr_hint": "~는/하는 것은 어때요?",
+    "section": 5
+  },
+  {
+    "english": "How about having fun together?",
+    "korean": "같이 재미있게 노는 건 어때요?",
+    "en_hint": "How about + 명사/동사ing",
+    "kr_hint": "~는/하는 것은 어때요?",
+    "section": 5
+  },
+  {
+    "english": "How about eating some food after class?",
+    "korean": "수업 후에 뭐 먹는 건 어때요?",
+    "en_hint": "How about + 명사/동사ing",
+    "kr_hint": "~는/하는 것은 어때요?",
+    "section": 5
+  },
+  {
+    "english": "How about taking a taxi instead of a bus?",
+    "korean": "버스 대신 택시를 타는 건 어때요?",
+    "en_hint": "How about + 명사/동사ing",
+    "kr_hint": "~는/하는 것은 어때요?",
+    "section": 5
+  },
+  {
+    "english": "Would you please go away?",
+    "korean": "저리 가주시겠어요?",
+    "en_hint": "Would you please + 동사?",
+    "kr_hint": "~해 주시겠어요?",
+    "section": 6
+  },
+  {
+    "english": "Would you please be quiet for a minute?",
+    "korean": "잠깐 동안만 조용히 해주시겠어요?",
+    "en_hint": "Would you please + 동사?",
+    "kr_hint": "~해 주시겠어요?",
+    "section": 6
+  },
+  {
+    "english": "Would you please tell me his number?",
+    "korean": "그분 연락처 좀 제게 알려주시겠어요?",
+    "en_hint": "Would you please + 동사?",
+    "kr_hint": "~해 주시겠어요?",
+    "section": 6
+  },
+  {
+    "english": "Would you please give me one more?",
+    "korean": "하나만 더 주실 수 있나요?",
+    "en_hint": "Would you please + 동사?",
+    "kr_hint": "~해 주시겠어요?",
+    "section": 6
+  },
+  {
+    "english": "Would you please come closer?",
+    "korean": "더 가까이 와주실 수 있나요?",
+    "en_hint": "Would you please + 동사?",
+    "kr_hint": "~해 주시겠어요?",
+    "section": 6
+  },
+  {
+    "english": "Would you please show me the picture?",
+    "korean": "제게 그 사진을 보여주시겠어요?",
+    "en_hint": "Would you please + 동사?",
+    "kr_hint": "~해 주시겠어요?",
+    "section": 6
+  },
+  {
+    "english": "Would you please listen to me?",
+    "korean": "제 말 좀 들어주시겠어요?",
+    "en_hint": "Would you please + 동사?",
+    "kr_hint": "~해 주시겠어요?",
+    "section": 6
+  },
+  {
+    "english": "Would you please bring me a glass of juice?",
+    "korean": "주스 한 잔만 가져다 주실래요?",
+    "en_hint": "Would you please + 동사?",
+    "kr_hint": "~해 주시겠어요?",
+    "section": 6
+  },
+  {
+    "english": "Would you please turn down the music?",
+    "korean": "음악 좀 줄여주실래요?",
+    "en_hint": "Would you please + 동사?",
+    "kr_hint": "~해 주시겠어요?",
+    "section": 6
+  },
+  {
+    "english": "Would you please close the door?",
+    "korean": "문을 좀 닫아주시겠어요?",
+    "en_hint": "Would you please + 동사?",
+    "kr_hint": "~해 주시겠어요?",
+    "section": 6
+  },
+  {
+    "english": "What’s your phone number?",
+    "korean": "너의 연락처가 어떻게 돼?",
+    "en_hint": "What is your + 명사?",
+    "kr_hint": "당신의 ~는 무엇인가요?",
+    "section": 7
+  },
+  {
+    "english": "What’s your ideal type?",
+    "korean": "이상형이 어떻게 되세요?",
+    "en_hint": "What is your + 명사?",
+    "kr_hint": "당신의 ~는 무엇인가요?",
+    "section": 7
+  },
+  {
+    "english": "What’s your excuse?",
+    "korean": "너 변명이 뭐야?",
+    "en_hint": "What is your + 명사?",
+    "kr_hint": "당신의 ~는 무엇인가요?",
+    "section": 7
+  },
+  {
+    "english": "What’s your opinion?",
+    "korean": "당신의 의견이 뭐예요?",
+    "en_hint": "What is your + 명사?",
+    "kr_hint": "당신의 ~는 무엇인가요?",
+    "section": 7
+  },
+  {
+    "english": "What’s your interest?",
+    "korean": "관심사가 뭐예요?",
+    "en_hint": "What is your + 명사?",
+    "kr_hint": "당신의 ~는 무엇인가요?",
+    "section": 7
+  },
+  {
+    "english": "What’s your religion?",
+    "korean": "종교가 어떻게 되세요?",
+    "en_hint": "What is your + 명사?",
+    "kr_hint": "당신의 ~는 무엇인가요?",
+    "section": 7
+  },
+  {
+    "english": "What’s your favorite childhood memory?",
+    "korean": "가장 좋았던 어린시절 기억은 무엇인가요?",
+    "en_hint": "What is your + 명사?",
+    "kr_hint": "당신의 ~는 무엇인가요?",
+    "section": 7
+  },
+  {
+    "english": "What’s your plan for this year?",
+    "korean": "올해에 대한 계획이 어떻게 돼요?",
+    "en_hint": "What is your + 명사?",
+    "kr_hint": "당신의 ~는 무엇인가요?",
+    "section": 7
+  },
+  {
+    "english": "What’s the difference?",
+    "korean": "차이점이 뭐예요?",
+    "en_hint": "What is your + 명사?",
+    "kr_hint": "당신의 ~는 무엇인가요?",
+    "section": 7
+  },
+  {
+    "english": "What’s the problem?",
+    "korean": "문제가 뭐예요?",
+    "en_hint": "What is your + 명사?",
+    "kr_hint": "당신의 ~는 무엇인가요?",
+    "section": 7
+  },
+  {
+    "english": "Let’s do this later.",
+    "korean": "이건 나중에 합시다.",
+    "en_hint": "Let’s + 동사",
+    "kr_hint": "~해요, 합시다",
+    "section": 8
+  },
+  {
+    "english": "Let’s talk about it tomorrow.",
+    "korean": "그것에 대해 내일 얘기합시다.",
+    "en_hint": "Let’s + 동사",
+    "kr_hint": "~해요, 합시다",
+    "section": 8
+  },
+  {
+    "english": "Let’s not meet again.",
+    "korean": "우리 다시 만나지 말아요.",
+    "en_hint": "Let’s + 동사",
+    "kr_hint": "~해요, 합시다",
+    "section": 8
+  },
+  {
+    "english": "Let’s eat out.",
+    "korean": "우리 외식해요.",
+    "en_hint": "Let’s + 동사",
+    "kr_hint": "~해요, 합시다",
+    "section": 8
+  },
+  {
+    "english": "Let’s go for a walk.",
+    "korean": "우리 산책하러 가요.",
+    "en_hint": "Let’s + 동사",
+    "kr_hint": "~해요, 합시다",
+    "section": 8
+  },
+  {
+    "english": "Let’s make a plan.",
+    "korean": "계획을 만들어 봅시다.",
+    "en_hint": "Let’s + 동사",
+    "kr_hint": "~해요, 합시다",
+    "section": 8
+  },
+  {
+    "english": "Let’s finish this.",
+    "korean": "이거 끝냅시다.",
+    "en_hint": "Let’s + 동사",
+    "kr_hint": "~해요, 합시다",
+    "section": 8
+  },
+  {
+    "english": "Let’s try that new restaurant.",
+    "korean": "저 새로운 식당에 가보도록 합시다.",
+    "en_hint": "Let’s + 동사",
+    "kr_hint": "~해요, 합시다",
+    "section": 8
+  },
+  {
+    "english": "Let’s check the movie schedule.",
+    "korean": "영화 상영시간을 확인해 봅시다.",
+    "en_hint": "Let’s + 동사",
+    "kr_hint": "~해요, 합시다",
+    "section": 8
+  },
+  {
+    "english": "Let’s clean up this place.",
+    "korean": "이곳을 정리합시다.",
+    "en_hint": "Let’s + 동사",
+    "kr_hint": "~해요, 합시다",
+    "section": 8
+  },
+  {
+    "english": "There is a problem.",
+    "korean": "문제가 있어요.",
+    "en_hint": "There is (are) + 명사",
+    "kr_hint": "~가(들이) 있어요",
+    "section": 9
+  },
+  {
+    "english": "There is another way.",
+    "korean": "다른 방법이 있어요.",
+    "en_hint": "There is (are) + 명사",
+    "kr_hint": "~가(들이) 있어요",
+    "section": 9
+  },
+  {
+    "english": "There is nothing here.",
+    "korean": "여기 아무것도 없어요.",
+    "en_hint": "There is (are) + 명사",
+    "kr_hint": "~가(들이) 있어요",
+    "section": 9
+  },
+  {
+    "english": "There is no man like you.",
+    "korean": "당신과 같은 남자는 없어요.",
+    "en_hint": "There is (are) + 명사",
+    "kr_hint": "~가(들이) 있어요",
+    "section": 9
+  },
+  {
+    "english": "There is no end.",
+    "korean": "끝이 없죠.",
+    "en_hint": "There is (are) + 명사",
+    "kr_hint": "~가(들이) 있어요",
+    "section": 9
+  },
+  {
+    "english": "There is a traffic jam.",
+    "korean": "교통 체증이 있어요. (길이 막혀요.)",
+    "en_hint": "There is (are) + 명사",
+    "kr_hint": "~가(들이) 있어요",
+    "section": 9
+  },
+  {
+    "english": "There are no tables available.",
+    "korean": "이용 가능한 테이블이 없어요.",
+    "en_hint": "There is (are) + 명사",
+    "kr_hint": "~가(들이) 있어요",
+    "section": 9
+  },
+  {
+    "english": "There are some mistakes.",
+    "korean": "실수들이 좀 있어요.",
+    "en_hint": "There is (are) + 명사",
+    "kr_hint": "~가(들이) 있어요",
+    "section": 9
+  },
+  {
+    "english": "There are many mosquitoes.",
+    "korean": "모기들이 많이 있어요.",
+    "en_hint": "There is (are) + 명사",
+    "kr_hint": "~가(들이) 있어요",
+    "section": 9
+  },
+  {
+    "english": "There are no tickets left.",
+    "korean": "남은 표가 없어요.",
+    "en_hint": "There is (are) + 명사",
+    "kr_hint": "~가(들이) 있어요",
+    "section": 9
+  },
+  {
   "english": "Thank you for today.",
   "korean": "오늘 감사합니다.",
   "en_hint": "Thank you for + 동사ing / 명사",
   "kr_hint": "~에 대해 고마워요",
   "section": 10
-},
+  },
   {
     "english": "Thank you for your help.",
     "korean": "도와 줘서 고마워요.",
@@ -1259,6 +1890,602 @@
     "section": 27
   },
   {
+    "english": "What did you eat for lunch?",
+    "korean": "점심에 뭐 먹었어?",
+    "en_hint": "What/When/Where did you + 동사?",
+    "kr_hint": "무엇/언제/어디서 ~했나요?",
+    "section": 28
+  },
+  {
+    "english": "What did you do last night?",
+    "korean": "어제 밤에 뭐 했어?",
+    "en_hint": "What/When/Where did you + 동사?",
+    "kr_hint": "무엇/언제/어디서 ~했나요?",
+    "section": 28
+  },
+  {
+    "english": "What did you see there?",
+    "korean": "거기서 뭐 봤어?",
+    "en_hint": "What/When/Where did you + 동사?",
+    "kr_hint": "무엇/언제/어디서 ~했나요?",
+    "section": 28
+  },
+  {
+    "english": "When did you come here?",
+    "korean": "너 언제 여기 왔어?",
+    "en_hint": "What/When/Where did you + 동사?",
+    "kr_hint": "무엇/언제/어디서 ~했나요?",
+    "section": 28
+  },
+  {
+    "english": "When did you last see her?",
+    "korean": "그녀를 마지막으로 본 게 언제야?",
+    "en_hint": "What/When/Where did you + 동사?",
+    "kr_hint": "무엇/언제/어디서 ~했나요?",
+    "section": 28
+  },
+  {
+    "english": "Where did you buy this?",
+    "korean": "이거 어디서 샀어?",
+    "en_hint": "What/When/Where did you + 동사?",
+    "kr_hint": "무엇/언제/어디서 ~했나요?",
+    "section": 28
+  },
+  {
+    "english": "Where did you get that souvenir?",
+    "korean": "그 기념품 어디서 샀어?",
+    "en_hint": "What/When/Where did you + 동사?",
+    "kr_hint": "무엇/언제/어디서 ~했나요?",
+    "section": 28
+  },
+  {
+    "english": "Where did you go last Saturday?",
+    "korean": "지난 토요일에 어디 갔어?",
+    "en_hint": "What/When/Where did you + 동사?",
+    "kr_hint": "무엇/언제/어디서 ~했나요?",
+    "section": 28
+  },
+  {
+    "english": "That’s what she said.",
+    "korean": "그게 그녀가 했던 말이야.",
+    "en_hint": "That’s + what/why/who + 주어 + 동사",
+    "kr_hint": "~것/이유/사람이에요",
+    "section": 29
+  },
+  {
+    "english": "That’s what we did.",
+    "korean": "그게 우리가 했던 거야.",
+    "en_hint": "That’s + what/why/who + 주어 + 동사",
+    "kr_hint": "~것/이유/사람이에요",
+    "section": 29
+  },
+  {
+    "english": "That’s what I heard.",
+    "korean": "그게 내가 들은 거야.",
+    "en_hint": "That’s + what/why/who + 주어 + 동사",
+    "kr_hint": "~것/이유/사람이에요",
+    "section": 29
+  },
+  {
+    "english": "That’s what friends are for.",
+    "korean": "그게 친구들이 있는 이유지.",
+    "en_hint": "That’s + what/why/who + 주어 + 동사",
+    "kr_hint": "~것/이유/사람이에요",
+    "section": 29
+  },
+  {
+    "english": "That’s who I was with.",
+    "korean": "그게 내가 같이 있었던 사람이야.",
+    "en_hint": "That’s + what/why/who + 주어 + 동사",
+    "kr_hint": "~것/이유/사람이에요",
+    "section": 29
+  },
+  {
+    "english": "That’s why life goes on.",
+    "korean": "그게 인생이 계속되는 이유야.",
+    "en_hint": "That’s + what/why/who + 주어 + 동사",
+    "kr_hint": "~것/이유/사람이에요",
+    "section": 29
+  },
+  {
+    "english": "That’s why I like you.",
+    "korean": "그게 내가 널 좋아하는 이유야.",
+    "en_hint": "That’s + what/why/who + 주어 + 동사",
+    "kr_hint": "~것/이유/사람이에요",
+    "section": 29
+  },
+  {
+    "english": "That’s why I asked you.",
+    "korean": "그게 내가 너에게 물어본 이유야.",
+    "en_hint": "That’s + what/why/who + 주어 + 동사",
+    "kr_hint": "~것/이유/사람이에요",
+    "section": 29
+  },
+  {
+    "english": "Have you ever done Pilates?",
+    "korean": "필라테스를 해 본 적 있나요?",
+    "en_hint": "Have you ever + 과거분사?",
+    "kr_hint": "…해 본 적 있나요?",
+    "section": 30
+  },
+  {
+    "english": "Have you ever thought about this?",
+    "korean": "이거 생각해 본 적 있나요?",
+    "en_hint": "Have you ever + 과거분사?",
+    "kr_hint": "…해 본 적 있나요?",
+    "section": 30
+  },
+  {
+    "english": "Have you ever started talking to a stranger?",
+    "korean": "낯선 사람에게 말 걸어 본 적 있나요?",
+    "en_hint": "Have you ever + 과거분사?",
+    "kr_hint": "…해 본 적 있나요?",
+    "section": 30
+  },
+  {
+    "english": "Have you ever seen that movie?",
+    "korean": "그 영화 본 적 있나요?",
+    "en_hint": "Have you ever + 과거분사?",
+    "kr_hint": "…해 본 적 있나요?",
+    "section": 30
+  },
+  {
+    "english": "Have you ever been fooled?",
+    "korean": "속은 적 있나요?",
+    "en_hint": "Have you ever + 과거분사?",
+    "kr_hint": "…해 본 적 있나요?",
+    "section": 30
+  },
+  {
+    "english": "Have you ever been to the US?",
+    "korean": "미국에 가 본 적 있나요?",
+    "en_hint": "Have you ever + 과거분사?",
+    "kr_hint": "…해 본 적 있나요?",
+    "section": 30
+  },
+  {
+    "english": "Have you ever suffered from jet lag?",
+    "korean": "시차 때문에 고생해 본 적 있나요?",
+    "en_hint": "Have you ever + 과거분사?",
+    "kr_hint": "…해 본 적 있나요?",
+    "section": 30
+  },
+  {
+    "english": "Have you ever tried Irish food?",
+    "korean": "아일랜드 음식 먹어 본 적 있나요?",
+    "en_hint": "Have you ever + 과거분사?",
+    "kr_hint": "…해 본 적 있나요?",
+    "section": 30
+  },
+  {
+    "english": "Have you ever heard anything from her?",
+    "korean": "그녀에게 무슨 소식이라도 들어 본 적 있나요?",
+    "en_hint": "Have you ever + 과거분사?",
+    "kr_hint": "…해 본 적 있나요?",
+    "section": 30
+  },
+  {
+    "english": "I have been studying English for at least 10 years.",
+    "korean": "적어도 10년 동안은 영어 공부를 해 오고 있어요.",
+    "en_hint": "I’ve been + 동사 ing",
+    "kr_hint": "저는 ~를 해오고 있어요.",
+    "section": 31
+  },
+  {
+    "english": "I have been dating him for 2 years.",
+    "korean": "저는 그와 2년째 사귀고 있어요.",
+    "en_hint": "I’ve been + 동사 ing",
+    "kr_hint": "저는 ~를 해오고 있어요.",
+    "section": 31
+  },
+  {
+    "english": "I have been visiting the hotel for a long time.",
+    "korean": "저는 오랫동안 그 호텔을 방문해 오고 있어요.",
+    "en_hint": "I’ve been + 동사 ing",
+    "kr_hint": "저는 ~를 해오고 있어요.",
+    "section": 31
+  },
+  {
+    "english": "I have been using the cosmetics since I was 20.",
+    "korean": "저는 20살 때부터 그 화장품을 써오고 있어요.",
+    "en_hint": "I’ve been + 동사 ing",
+    "kr_hint": "저는 ~를 해오고 있어요.",
+    "section": 31
+  },
+  {
+    "english": "I have been working for the same company for 5 years.",
+    "korean": "저는 5년 동안 같은 회사에서 다니고 있어요.",
+    "en_hint": "I’ve been + 동사 ing",
+    "kr_hint": "저는 ~를 해오고 있어요.",
+    "section": 31
+  },
+  {
+    "english": "I have been staying here while house-hunting.",
+    "korean": "저는 집을 찾는 동안 여기에 머물고 있어요.",
+    "en_hint": "I’ve been + 동사 ing",
+    "kr_hint": "저는 ~를 해오고 있어요.",
+    "section": 31
+  },
+  {
+    "english": "I have been watching the drama.",
+    "korean": "저는 그 드라마를 봐오고 있어요.",
+    "en_hint": "I’ve been + 동사 ing",
+    "kr_hint": "저는 ~를 해오고 있어요.",
+    "section": 31
+  },
+  {
+    "english": "I’ve been studying for three hours.",
+    "korean": "난 세 시간째 계속 공부 중이야.",
+    "en_hint": "I’ve been + 동사 ing",
+    "kr_hint": "저는 ~를 해오고 있어요.",
+    "section": 31
+  },
+  {
+    "english": "I’ve been doing this all-day.",
+    "korean": "하루 종일 이런 걸 하고 있어.",
+    "en_hint": "I’ve been + 동사 ing",
+    "kr_hint": "저는 ~를 해오고 있어요.",
+    "section": 31
+  },
+  {
+    "english": "I’ve been trying to contact you.",
+    "korean": "나는 너에게 계속 연락을 시도하고 있었어.",
+    "en_hint": "I’ve been + 동사 ing",
+    "kr_hint": "저는 ~를 해오고 있어요.",
+    "section": 31
+  },
+  {
+    "english": "Will you pick me up at 4pm?",
+    "korean": "4시에 날 데리러 와줄거야?",
+    "en_hint": "Will you + 동사",
+    "kr_hint": "~할래요?",
+    "section": 32
+  },
+  {
+    "english": "Will you turn down the volume?",
+    "korean": "소리 좀 줄여 줄래요?",
+    "en_hint": "Will you + 동사",
+    "kr_hint": "~할래요?",
+    "section": 32
+  },
+  {
+    "english": "Will you go see a movie with me?",
+    "korean": "저랑 같이 영화 보러 가실래요?",
+    "en_hint": "Will you + 동사",
+    "kr_hint": "~할래요?",
+    "section": 32
+  },
+  {
+    "english": "Will you come with me?",
+    "korean": "거기서 만날까?",
+    "en_hint": "Will you + 동사",
+    "kr_hint": "~할래요?",
+    "section": 32
+  },
+  {
+    "english": "Will you meet me there?",
+    "korean": "거기서 만날래요?",
+    "en_hint": "Will you + 동사",
+    "kr_hint": "~할래요?",
+    "section": 32
+  },
+  {
+    "english": "Will you buy me a gimbap from a convenience store?",
+    "korean": "편의점에서 김밥 좀 사줄래요?",
+    "en_hint": "Will you + 동사",
+    "kr_hint": "~할래요?",
+    "section": 32
+  },
+  {
+    "english": "Will you show me where the restroom is?",
+    "korean": "화장실이 어디인지 보여주시겠어요?",
+    "en_hint": "Will you + 동사",
+    "kr_hint": "~할래요?",
+    "section": 32
+  },
+  {
+    "english": "Will you promise not to tell her?",
+    "korean": "그녀에게 말하지 않겠다고 약속해줄래?",
+    "en_hint": "Will you + 동사",
+    "kr_hint": "~할래요?",
+    "section": 32
+  },
+  {
+    "english": "Will you change your hair color?",
+    "korean": "너 머리색 바꿀거야?",
+    "en_hint": "Will you + 동사",
+    "kr_hint": "~할래요?",
+    "section": 32
+  },
+  {
+    "english": "Will you speak louder, please?",
+    "korean": "좀 더 크게 말해줄래요?",
+    "en_hint": "Will you + 동사",
+    "kr_hint": "~할래요?",
+    "section": 32
+  },
+  {
+    "english": "Do you ever feel alone?",
+    "korean": "외롭다고 느끼실때가 있나요?",
+    "en_hint": "Do you ever + 동사",
+    "kr_hint": "평소에 ~ 하나요? (어떤 행동들을 할 때가 있는지)",
+    "section": 33
+  },
+  {
+    "english": "Do you ever exercise?",
+    "korean": "평소에 운동을 하나요?",
+    "en_hint": "Do you ever + 동사",
+    "kr_hint": "평소에 ~ 하나요? (어떤 행동들을 할 때가 있는지)",
+    "section": 33
+  },
+  {
+    "english": "Do you ever get up late?",
+    "korean": "평소에 늦게 일어날 때도 있나요?",
+    "en_hint": "Do you ever + 동사",
+    "kr_hint": "평소에 ~ 하나요? (어떤 행동들을 할 때가 있는지)",
+    "section": 33
+  },
+  {
+    "english": "Do you ever text him first?",
+    "korean": "평소에 그에게 먼저 문자는 하나요?",
+    "en_hint": "Do you ever + 동사",
+    "kr_hint": "평소에 ~ 하나요? (어떤 행동들을 할 때가 있는지)",
+    "section": 33
+  },
+  {
+    "english": "Do you ever practice?",
+    "korean": "연습은 좀 하나?",
+    "en_hint": "Do you ever + 동사",
+    "kr_hint": "평소에 ~ 하나요? (어떤 행동들을 할 때가 있는지)",
+    "section": 33
+  },
+  {
+    "english": "Do you ever read?",
+    "korean": "책은 좀 읽나요?",
+    "en_hint": "Do you ever + 동사",
+    "kr_hint": "평소에 ~ 하나요? (어떤 행동들을 할 때가 있는지)",
+    "section": 33
+  },
+  {
+    "english": "Do you ever carry cash?",
+    "korean": "현금을 좀 가지고 다니나요?",
+    "en_hint": "Do you ever + 동사",
+    "kr_hint": "평소에 ~ 하나요? (어떤 행동들을 할 때가 있는지)",
+    "section": 33
+  },
+  {
+    "english": "Do you ever play a musical instrument?",
+    "korean": "평소에 악기 연주는 하나?",
+    "en_hint": "Do you ever + 동사",
+    "kr_hint": "평소에 ~ 하나요? (어떤 행동들을 할 때가 있는지)",
+    "section": 33
+  },
+  {
+    "english": "Do you ever shop online at work?",
+    "korean": "근무 중에 온라인 쇼핑을 할 때도 있나요?",
+    "en_hint": "Do you ever + 동사",
+    "kr_hint": "평소에 ~ 하나요? (어떤 행동들을 할 때가 있는지)",
+    "section": 33
+  },
+  {
+    "english": "Do you ever think like that?",
+    "korean": "그렇게 생각할 때도 있나요?",
+    "en_hint": "Do you ever + 동사",
+    "kr_hint": "평소에 ~ 하나요? (어떤 행동들을 할 때가 있는지)",
+    "section": 33
+  },
+  {
+    "english": "How often do you talk to your parents?",
+    "korean": "부모님과는 얼마나 자주 이야기 하시나요?",
+    "en_hint": "How often do you + 동사?",
+    "kr_hint": "얼마나 자주 ~를 하나요?",
+    "section": 34
+  },
+  {
+    "english": "How often do you go to the gym?",
+    "korean": "얼마나 자주 헬스장 가세요?",
+    "en_hint": "How often do you + 동사?",
+    "kr_hint": "얼마나 자주 ~를 하나요?",
+    "section": 34
+  },
+  {
+    "english": "How often do you argue with your girlfriend?",
+    "korean": "여자친구와 얼마나 자주 다투나요?",
+    "en_hint": "How often do you + 동사?",
+    "kr_hint": "얼마나 자주 ~를 하나요?",
+    "section": 34
+  },
+  {
+    "english": "How often do you travel abroad?",
+    "korean": "얼마나 자주 해외여행 가세요?",
+    "en_hint": "How often do you + 동사?",
+    "kr_hint": "얼마나 자주 ~를 하나요?",
+    "section": 34
+  },
+  {
+    "english": "How often do you take a taxi to go home?",
+    "korean": "얼마나 자주 택시를 타고 집에 가나요?",
+    "en_hint": "How often do you + 동사?",
+    "kr_hint": "얼마나 자주 ~를 하나요?",
+    "section": 34
+  },
+  {
+    "english": "How often do you look in the mirror?",
+    "korean": "거울은 얼마나 자주 보세요?",
+    "en_hint": "How often do you + 동사?",
+    "kr_hint": "얼마나 자주 ~를 하나요?",
+    "section": 34
+  },
+  {
+    "english": "How often do you watch TV?",
+    "korean": "얼마나 자주 TV를 보시나요?",
+    "en_hint": "How often do you + 동사?",
+    "kr_hint": "얼마나 자주 ~를 하나요?",
+    "section": 34
+  },
+  {
+    "english": "How often do you eat out?",
+    "korean": "얼마나 자주 외식하시나요?",
+    "en_hint": "How often do you + 동사?",
+    "kr_hint": "얼마나 자주 ~를 하나요?",
+    "section": 34
+  },
+  {
+    "english": "How often do you order delivery food?",
+    "korean": "얼마나 자주 배달 음식을 시켜 먹나요?",
+    "en_hint": "How often do you + 동사?",
+    "kr_hint": "얼마나 자주 ~를 하나요?",
+    "section": 34
+  },
+  {
+    "english": "How often do you get a health check up?",
+    "korean": "얼마나 자주 건강검진을 받나요?",
+    "en_hint": "How often do you + 동사?",
+    "kr_hint": "얼마나 자주 ~를 하나요?",
+    "section": 34
+  },
+  {
+    "english": "I hope to see him soon.",
+    "korean": "곧 그를 보길 원해요.",
+    "en_hint": "I hope to + 동사",
+    "kr_hint": "~를 하면 좋겠어요.",
+    "section": 35
+  },
+  {
+    "english": "I hope to walk you home tomorrow.",
+    "korean": "내일 제가 당신을 집에 데려다주고 싶어요.",
+    "en_hint": "I hope to + 동사",
+    "kr_hint": "~를 하면 좋겠어요.",
+    "section": 35
+  },
+  {
+    "english": "I hope to get better next time.",
+    "korean": "다음에는 더 잘하고 싶어요.",
+    "en_hint": "I hope to + 동사",
+    "kr_hint": "~를 하면 좋겠어요.",
+    "section": 35
+  },
+  {
+    "english": "I hope to get a job soon.",
+    "korean": "곧 취업했으면 좋겠어요.",
+    "en_hint": "I hope to + 동사",
+    "kr_hint": "~를 하면 좋겠어요.",
+    "section": 35
+  },
+  {
+    "english": "I hope to remember that for a long time.",
+    "korean": "그것을 오랫동안 기억했으면 좋겠어.",
+    "en_hint": "I hope to + 동사",
+    "kr_hint": "~를 하면 좋겠어요.",
+    "section": 35
+  },
+  {
+    "english": "I hope that everything is ok.",
+    "korean": "모든게 괜찮았으면 좋겠어.",
+    "en_hint": "I hope to + 동사",
+    "kr_hint": "~를 하면 좋겠어요.",
+    "section": 35
+  },
+  {
+    "english": "I hope that you don’t fail the driving test.",
+    "korean": "네가 운전 시험에 떨어지지 않기를 바라.",
+    "en_hint": "I hope to + 동사",
+    "kr_hint": "~를 하면 좋겠어요.",
+    "section": 35
+  },
+  {
+    "english": "I hope that he doesn’t lie to us.",
+    "korean": "그가 우리에게 거짓말 하지 않기를 바랍니다.",
+    "en_hint": "I hope to + 동사",
+    "kr_hint": "~를 하면 좋겠어요.",
+    "section": 35
+  },
+  {
+    "english": "I hope that we can go on a trip.",
+    "korean": "우리가 여행을 갈 수 있으면 좋겠어요.",
+    "en_hint": "I hope to + 동사",
+    "kr_hint": "~를 하면 좋겠어요.",
+    "section": 35
+  },
+  {
+    "english": "I hope that she doesn’t miss the train.",
+    "korean": "그녀가 기차를 놓치지 않기를 바라요.",
+    "en_hint": "I hope to + 동사",
+    "kr_hint": "~를 하면 좋겠어요.",
+    "section": 35
+  },
+  {
+    "english": "I agree with you.",
+    "korean": "당신 말에 동의해요.",
+    "en_hint": "I agree with + 명사",
+    "kr_hint": "~에 동의해요.",
+    "section": 36
+  },
+  {
+    "english": "I agree with your advice.",
+    "korean": "당신의 충고에 동의해요.",
+    "en_hint": "I agree with + 명사",
+    "kr_hint": "~에 동의해요.",
+    "section": 36
+  },
+  {
+    "english": "I agree with you both.",
+    "korean": "두 분 말씀에 동의해요.",
+    "en_hint": "I agree with + 명사",
+    "kr_hint": "~에 동의해요.",
+    "section": 36
+  },
+  {
+    "english": "I agree that he is smart.",
+    "korean": "그가 똑똑하다는 것에 동의해요.",
+    "en_hint": "I agree that + 문장",
+    "kr_hint": "~가 …라는 것에 동의해요.",
+    "section": 36
+  },
+  {
+    "english": "I agree that I need to exercise.",
+    "korean": "제가 운동을 해야한다는 것에 동의해요.",
+    "en_hint": "I agree that + 문장",
+    "kr_hint": "~가 …라는 것에 동의해요.",
+    "section": 36
+  },
+  {
+    "english": "I agree that taking a taxi is cheaper.",
+    "korean": "택시 타는 게 더 저렴하다는 것에 동의해요.",
+    "en_hint": "I agree that + 문장",
+    "kr_hint": "~가 …라는 것에 동의해요.",
+    "section": 36
+  },
+  {
+    "english": "I agree that eating healthy is the key.",
+    "korean": "건강한 식습관이 핵심이라는 것에 동의해요.",
+    "en_hint": "I agree that + 문장",
+    "kr_hint": "~가 …라는 것에 동의해요.",
+    "section": 36
+  },
+  {
+    "english": "I agree that he likes you.",
+    "korean": "그 남자가 널 좋아한다는 것에 동의해요.",
+    "en_hint": "I agree that + 문장",
+    "kr_hint": "~가 …라는 것에 동의해요.",
+    "section": 36
+  },
+  {
+    "english": "I agree that it’s important to study hard.",
+    "korean": "열심히 공부하는 것이 중요하다는 것에 동의해요.",
+    "en_hint": "I agree that + 문장",
+    "kr_hint": "~가 …라는 것에 동의해요.",
+    "section": 36
+  },
+  {
+    "english": "I agree that the movie was not good.",
+    "korean": "그 영화가 별로였다는 것에 동의해요.",
+    "en_hint": "I agree that + 문장",
+    "kr_hint": "~가 …라는 것에 동의해요.",
+    "section": 36
+  },
+
+  {
     "english": "I am upset that people forget to say hello.",
     "korean": "사람들이 인사하는 것을 잊어서 속상해요.",
     "en_hint": "I’m upset/happy that + 문장",
@@ -1509,5 +2736,424 @@
     "en_hint": "I would + 동사",
     "kr_hint": "나는 ~할 것 같아요",
     "section": 40
+  },
+  {
+    "english": "It’s time to challenge yourself.",
+    "korean": "스스로에게 도전을 해야 할 때야.",
+    "en_hint": "It’s time to + 동사",
+    "kr_hint": "~할 시간(때)이에요",
+    "section": 41
+  },
+  {
+    "english": "It’s time to express your feelings.",
+    "korean": "너의 감정들을 표현할 때야.",
+    "en_hint": "It’s time to + 동사",
+    "kr_hint": "~할 시간(때)이에요",
+    "section": 41
+  },
+  {
+    "english": "It’s time to plan your future.",
+    "korean": "너의 미래를 설계할 시간이야.",
+    "en_hint": "It’s time to + 동사",
+    "kr_hint": "~할 시간(때)이에요",
+    "section": 41
+  },
+  {
+    "english": "It’s time to let go of the past.",
+    "korean": "과거를 버려야 할 때야.",
+    "en_hint": "It’s time to + 동사",
+    "kr_hint": "~할 시간(때)이에요",
+    "section": 41
+  },
+  {
+    "english": "It’s time to go back home.",
+    "korean": "집에 돌아가야 할 시간이야.",
+    "en_hint": "It’s time to + 동사",
+    "kr_hint": "~할 시간(때)이에요",
+    "section": 41
+  },
+  {
+    "english": "It’s time to turn words into action.",
+    "korean": "말을 행동으로 옮겨야 할 때야.",
+    "en_hint": "It’s time to + 동사",
+    "kr_hint": "~할 시간(때)이에요",
+    "section": 41
+  },
+  {
+    "english": "It’s time to work hard now.",
+    "korean": "작렬할 시간이야.",
+    "en_hint": "It’s time to + 동사",
+    "kr_hint": "~할 시간(때)이에요",
+    "section": 41
+  },
+  {
+    "english": "It’s time to say goodbye.",
+    "korean": "작별인사를 해야 할 때야.",
+    "en_hint": "It’s time to + 동사",
+    "kr_hint": "~할 시간(때)이에요",
+    "section": 41
+  },
+  {
+    "english": "It’s time to answer your question.",
+    "korean": "네 질문에 대답할 시간이야.",
+    "en_hint": "It’s time to + 동사",
+    "kr_hint": "~할 시간(때)이에요",
+    "section": 41
+  },
+  {
+    "english": "It’s time to make a decision.",
+    "korean": "결정을 내려야 할 때야.",
+    "en_hint": "It’s time to + 동사",
+    "kr_hint": "~할 시간(때)이에요",
+    "section": 41
+  },
+  {
+    "english": "I’m okay with spicy food.",
+    "korean": "난 매운 음식 괜찮아.",
+    "en_hint": "I’m (not) okay with + 명사/동사ing",
+    "kr_hint": "저는 ~는/하는 것은 괜찮아요",
+    "section": 42
+  },
+  {
+    "english": "I’m okay with rainy days on trip.",
+    "korean": "여행에서 비 오는 날도 괜찮아.",
+    "en_hint": "I’m (not) okay with + 명사/동사ing",
+    "kr_hint": "저는 ~는/하는 것은 괜찮아요",
+    "section": 42
+  },
+  {
+    "english": "I’m okay with meeting new people.",
+    "korean": "새로운 사람들을 만나는 건 괜찮아.",
+    "en_hint": "I’m (not) okay with + 명사/동사ing",
+    "kr_hint": "저는 ~는/하는 것은 괜찮아요",
+    "section": 42
+  },
+  {
+    "english": "I’m okay with admitting my mistake.",
+    "korean": "실수를 인정하는 건 괜찮아.",
+    "en_hint": "I’m (not) okay with + 명사/동사ing",
+    "kr_hint": "저는 ~는/하는 것은 괜찮아요",
+    "section": 42
+  },
+  {
+    "english": "I’m okay with a big change.",
+    "korean": "큰 변화는 괜찮아.",
+    "en_hint": "I’m (not) okay with + 명사/동사ing",
+    "kr_hint": "저는 ~는/하는 것은 괜찮아요",
+    "section": 42
+  },
+  {
+    "english": "I’m okay with constructive criticism.",
+    "korean": "건설적인 비판은 괜찮아.",
+    "en_hint": "I’m (not) okay with + 명사/동사ing",
+    "kr_hint": "저는 ~는/하는 것은 괜찮아요",
+    "section": 42
+  },
+  {
+    "english": "I’m okay with spending time alone.",
+    "korean": "혼자 시간을 보내는 것도 괜찮아.",
+    "en_hint": "I’m (not) okay with + 명사/동사ing",
+    "kr_hint": "저는 ~는/하는 것은 괜찮아요",
+    "section": 42
+  },
+  {
+    "english": "I’m not okay with that to be honest.",
+    "korean": "솔직히 난 그건 괜찮지 않아.",
+    "en_hint": "I’m (not) okay with + 명사/동사ing",
+    "kr_hint": "저는 ~는/하는 것은 괜찮아요",
+    "section": 42
+  },
+  {
+    "english": "I’m not okay with breaking promises.",
+    "korean": "약속 어기는 건 괜찮지 않아.",
+    "en_hint": "I’m (not) okay with + 명사/동사ing",
+    "kr_hint": "저는 ~는/하는 것은 괜찮아요",
+    "section": 42
+  },
+  {
+    "english": "I’m not okay with rude behavior.",
+    "korean": "무례한 행동은 괜찮지 않아.",
+    "en_hint": "I’m (not) okay with + 명사/동사ing",
+    "kr_hint": "저는 ~는/하는 것은 괜찮아요",
+    "section": 42
+  },
+  {
+    "english": "Let me check my schedule.",
+    "korean": "내 일정을 확인해 볼게.",
+    "en_hint": "Let me + 동사",
+    "kr_hint": "제가 ~할게요",
+    "section": 43
+  },
+  {
+    "english": "Let me introduce myself.",
+    "korean": "나 소개할게.",
+    "en_hint": "Let me + 동사",
+    "kr_hint": "제가 ~할게요",
+    "section": 43
+  },
+  {
+    "english": "Let me make a suggestion.",
+    "korean": "내가 제안을 하나 할게.",
+    "en_hint": "Let me + 동사",
+    "kr_hint": "제가 ~할게요",
+    "section": 43
+  },
+  {
+    "english": "Let me find a solution for you.",
+    "korean": "널 위해 해결책을 찾아 볼게.",
+    "en_hint": "Let me + 동사",
+    "kr_hint": "제가 ~할게요",
+    "section": 43
+  },
+  {
+    "english": "Let me show you my favorite spot.",
+    "korean": "내가 제일 좋아하는 장소를 소개할게.",
+    "en_hint": "Let me + 동사",
+    "kr_hint": "제가 ~할게요",
+    "section": 43
+  },
+  {
+    "english": "Let me listen to your concerns.",
+    "korean": "너의 걱정을 들어볼게.",
+    "en_hint": "Let me + 동사",
+    "kr_hint": "제가 ~할게요",
+    "section": 43
+  },
+  {
+    "english": "Let me share my favorite book with you.",
+    "korean": "내가 가장 좋아하는 책을 너에게 공유할게.",
+    "en_hint": "Let me + 동사",
+    "kr_hint": "제가 ~할게요",
+    "section": 43
+  },
+  {
+    "english": "Let me show you pictures of the trip.",
+    "korean": "너에게 여행의 사진들을 보여줄게.",
+    "en_hint": "Let me + 동사",
+    "kr_hint": "제가 ~할게요",
+    "section": 43
+  },
+  {
+    "english": "Let me sing a song for you.",
+    "korean": "널 위해 노래를 한 곡 부를게.",
+    "en_hint": "Let me + 동사",
+    "kr_hint": "제가 ~할게요",
+    "section": 43
+  },
+  {
+    "english": "Let me search it for you.",
+    "korean": "널 위해 그것을 검색해볼게.",
+    "en_hint": "Let me + 동사",
+    "kr_hint": "제가 ~할게요",
+    "section": 43
+  },{
+  "english": "How could you forget your coat?",
+  "korean": "어떻게 네 코트를 잊어버릴 수 있어?",
+  "en_hint": "How could you + 동사?",
+  "kr_hint": "어떻게 ~할 수 있죠?",
+  "section": 44
+},
+  {
+    "english": "How could you lose your phone again?",
+    "korean": "어떻게 핸드폰을 또 잃어버릴 수 있어?",
+    "en_hint": "How could you + 동사?",
+    "kr_hint": "어떻게 ~할 수 있죠?",
+    "section": 44
+  },
+  {
+    "english": "How could you make the same mistake again?",
+    "korean": "어떻게 같은 실수를 또 저지를 수 있어?",
+    "en_hint": "How could you + 동사?",
+    "kr_hint": "어떻게 ~할 수 있죠?",
+    "section": 44
+  },
+  {
+    "english": "How could you forget your promise?",
+    "korean": "어떻게 네 약속을 잊을 수 있어?",
+    "en_hint": "How could you + 동사?",
+    "kr_hint": "어떻게 ~할 수 있죠?",
+    "section": 44
+  },
+  {
+    "english": "How could you spill the water all over the floor?",
+    "korean": "어떻게 물을 바닥에 흘릴 수 있어?",
+    "en_hint": "How could you + 동사?",
+    "kr_hint": "어떻게 ~할 수 있죠?",
+    "section": 44
+  },
+  {
+    "english": "How could you miss the bus?",
+    "korean": "어떻게 버스를 놓칠 수 있어?",
+    "en_hint": "How could you + 동사?",
+    "kr_hint": "어떻게 ~할 수 있죠?",
+    "section": 44
+  },
+  {
+    "english": "How could you not remember my birthday?",
+    "korean": "어떻게 내 생일을 기억하지 못할 수 있어?",
+    "en_hint": "How could you + 동사?",
+    "kr_hint": "어떻게 ~할 수 있죠?",
+    "section": 44
+  },
+  {
+    "english": "How could you not see me?",
+    "korean": "어떻게 날 못 볼 수 있어?",
+    "en_hint": "How could you + 동사?",
+    "kr_hint": "어떻게 ~할 수 있죠?",
+    "section": 44
+  },
+  {
+    "english": "How could you not find the cafe?",
+    "korean": "어떻게 카페를 못 찾을 수 있어?",
+    "en_hint": "How could you + 동사?",
+    "kr_hint": "어떻게 ~할 수 있죠?",
+    "section": 44
+  },
+  {
+    "english": "How could you not read the notice?",
+    "korean": "어떻게 공지를 읽지 않을 수 있어?",
+    "en_hint": "How could you + 동사?",
+    "kr_hint": "어떻게 ~할 수 있죠?",
+    "section": 44
+  },
+  {
+    "english": "I’m getting hungry.",
+    "korean": "점점 배고파지고 있어.",
+    "en_hint": "I’m getting + 형용사",
+    "kr_hint": "점점 ~해지고 있어요",
+    "section": 45
+  },
+  {
+    "english": "I’m getting excited.",
+    "korean": "점점 신나지고 있어.",
+    "en_hint": "I’m getting + 형용사",
+    "kr_hint": "점점 ~해지고 있어요",
+    "section": 45
+  },
+  {
+    "english": "I’m getting tired.",
+    "korean": "점점 피곤해지고 있어.",
+    "en_hint": "I’m getting + 형용사",
+    "kr_hint": "점점 ~해지고 있어요",
+    "section": 45
+  },
+  {
+    "english": "I’m getting cold.",
+    "korean": "점점 추워지고 있어.",
+    "en_hint": "I’m getting + 형용사",
+    "kr_hint": "점점 ~해지고 있어요",
+    "section": 45
+  },
+  {
+    "english": "I’m getting closer to my goals.",
+    "korean": "내 목표로 점점 가까워지고 있어.",
+    "en_hint": "I’m getting + 형용사",
+    "kr_hint": "점점 ~해지고 있어요",
+    "section": 45
+  },
+  {
+    "english": "I’m getting busier nowadays.",
+    "korean": "요즘 점점 바빠지고 있어.",
+    "en_hint": "I’m getting + 형용사",
+    "kr_hint": "점점 ~해지고 있어요",
+    "section": 45
+  },
+  {
+    "english": "I’m getting better at cooking.",
+    "korean": "점점 요리하는 것에 더 나아지고 있어.",
+    "en_hint": "I’m getting + 형용사",
+    "kr_hint": "점점 ~해지고 있어요",
+    "section": 45
+  },
+  {
+    "english": "I’m getting faster at typing.",
+    "korean": "점점 타자 치는 것에 빨라지고 있어.",
+    "en_hint": "I’m getting + 형용사",
+    "kr_hint": "점점 ~해지고 있어요",
+    "section": 45
+  },
+  {
+    "english": "I’m getting taller every year.",
+    "korean": "매년 점점 키가 크고 있어.",
+    "en_hint": "I’m getting + 형용사",
+    "kr_hint": "점점 ~해지고 있어요",
+    "section": 45
+  },
+  {
+    "english": "I’m getting better at remembering names.",
+    "korean": "점점 이름 외우는 것에 나아지고 있어.",
+    "en_hint": "I’m getting + 형용사",
+    "kr_hint": "점점 ~해지고 있어요",
+    "section": 45
+  },
+  {
+    "english": "Are you done with your meal?",
+    "korean": "식사 다 끝났어?",
+    "en_hint": "Are you done with + 명사/동사ing",
+    "kr_hint": "~는 다 끝났어요?",
+    "section": 46
+  },
+  {
+    "english": "Are you done with your bath?",
+    "korean": "목욕 다 끝났어?",
+    "en_hint": "Are you done with + 명사/동사ing",
+    "kr_hint": "~는 다 끝났어요?",
+    "section": 46
+  },
+  {
+    "english": "Are you done with your game?",
+    "korean": "게임 다 끝났어?",
+    "en_hint": "Are you done with + 명사/동사ing",
+    "kr_hint": "~는 다 끝났어요?",
+    "section": 46
+  },
+  {
+    "english": "Are you done with your nap?",
+    "korean": "낮잠 다 잤어?",
+    "en_hint": "Are you done with + 명사/동사ing",
+    "kr_hint": "~는 다 끝났어요?",
+    "section": 46
+  },
+  {
+    "english": "Are you done with the laundry?",
+    "korean": "빨래 다 끝났어?",
+    "en_hint": "Are you done with + 명사/동사ing",
+    "kr_hint": "~는 다 끝났어요?",
+    "section": 46
+  },
+  {
+    "english": "I’m done with you.",
+    "korean": "너랑은 끝이야.",
+    "en_hint": "I am done with + 명사/동사ing",
+    "kr_hint": "~는 다 끝났어요 / ~는 다 했어요",
+    "section": 46
+  },
+  {
+    "english": "I’m done with my homework for today.",
+    "korean": "오늘 숙제는 다 끝났어.",
+    "en_hint": "I am done with + 명사/동사ing",
+    "kr_hint": "~는 다 끝났어요 / ~는 다 했어요",
+    "section": 46
+  },
+  {
+    "english": "I’m done with my walk.",
+    "korean": "산책은 다 끝났어.",
+    "en_hint": "I am done with + 명사/동사ing",
+    "kr_hint": "~는 다 끝났어요 / ~는 다 했어요",
+    "section": 46
+  },
+  {
+    "english": "I’m done with the dishes.",
+    "korean": "설거지는 다 끝났어.",
+    "en_hint": "I am done with + 명사/동사ing",
+    "kr_hint": "~는 다 끝났어요 / ~는 다 했어요",
+    "section": 46
+  },
+  {
+    "english": "I’m done with my phone call.",
+    "korean": "통화는 다 끝났어.",
+    "en_hint": "I am done with + 명사/동사ing",
+    "kr_hint": "~는 다 끝났어요 / ~는 다 했어요",
+    "section": 46
   }
 ]
