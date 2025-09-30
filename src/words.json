@@ -1,10 +1,11 @@
-[ {
-  "english": "Thank you for today.",
-  "korean": "오늘 감사합니다.",
-  "en_hint": "Thank you for + 동사ing / 명사",
-  "kr_hint": "~에 대해 고마워요",
-  "section": 10
-},
+[
+  {
+    "english": "Thank you for today.",
+    "korean": "오늘 감사합니다.",
+    "en_hint": "Thank you for + 동사ing / 명사",
+    "kr_hint": "~에 대해 고마워요",
+    "section": 10
+  },
   {
     "english": "Thank you for your help.",
     "korean": "도와 줘서 고마워요.",

@@ -24,6 +24,7 @@ function App() {
   const [speechSupported, setSpeechSupported] = useState(true); // 음성인식 지원 여부
   const [userStartedSpeech, setUserStartedSpeech] = useState(false); // 사용자가 수동으로 음성인식 시작했는지
   const [showSettings, setShowSettings] = useState(false); // 설정 화면 표시 여부
+  const [isProcessing, setIsProcessing] = useState(false); // 음성인식 처리 중 상태
 
   const getFilteredWords = useCallback(() => {
     if (selectedSection === 'all') {
@@ -1053,16 +1054,31 @@ function App() {
                 <div className="voice-controls">
                   {speechSupported && (
                     <button
-                      className={`mic-button ${isListening ? 'listening' : ''}`}
+                      className={`mic-button ${isListening ? 'listening' : ''} ${isProcessing ? 'processing' : ''}`}
                       onClick={(e) => {
                         e.preventDefault(); // 기본 동작 방지
+
+                        // 처리 중이면 클릭 무시
+                        if (isProcessing) {
+                          console.log('처리 중이므로 클릭 무시');
+                          return;
+                        }
+
                         console.log('=== 음성인식 버튼 클릭됨 (모든 플랫폼 통일) ===');
                         console.log('현재 상태:', isListening ? '듣는 중' : '대기 중');
+
+                        // 처리 시작
+                        setIsProcessing(true);
 
                         // 첫 번째 클릭이면 userStartedSpeech를 true로 설정
                         if (!userStartedSpeech) {
                           setUserStartedSpeech(true);
                         }
+
+                        // 처리 완료 후 상태 해제 (500ms 후)
+                        setTimeout(() => {
+                          setIsProcessing(false);
+                        }, 500);
 
                         if (isListening) {
                           stopSpeechRecognition();
@@ -1070,8 +1086,14 @@ function App() {
                           startSpeechRecognition();
                         }
                       }}
+                      disabled={isProcessing}
                     >
-                      {isListening ? '🔴 음성인식 중지' : '🎤 음성인식 시작'}
+                      {isProcessing
+                        ? '처리 중...'
+                        : isListening
+                          ? '🔴 음성인식 중지'
+                          : '🎤 음성인식 시작'
+                      }
                     </button>
                   )}
                   <button
